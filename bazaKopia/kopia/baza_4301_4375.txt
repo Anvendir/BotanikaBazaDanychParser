@@ -1,0 +1,1201 @@
+{
+	"nr_kol": 4301, "rodz_id": 566, "rodzaj": "Vicia",
+	"nzw_gat": "tetrasperma", "gatunek": "Vicia tetrasperma", "autor_gat": "(L.) Schreb.",
+	"n_lacinska": "Vicia tetrasperma (L.) Schreb.", "n_polska": "Wyka czteronasienna",
+	"synantrop": "A",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Fabaceae",
+		"rzad": "Fabales",
+		"nadrzad": "Rosiflorae",
+		"podklasa": "Rosidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4302, "rodz_id": 566, "rodzaj": "Vicia",
+	"nzw_gat": "villosa", "gatunek": "Vicia villosa", "autor_gat": "Roth",
+	"n_lacinska": "Vicia villosa Roth", "n_polska": "Wyka kosmata",
+	"synantrop": "A",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Fabaceae",
+		"rzad": "Fabales",
+		"nadrzad": "Rosiflorae",
+		"podklasa": "Rosidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4303, "rodz_id": 289, "rodzaj": "Vinca",
+	"nzw_gat": "major", "gatunek": "Vinca major", "autor_gat": "L.",
+	"n_lacinska": "Vinca major L.", "n_polska": "Barwinek większy",
+	"synantrop": "U",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Apocynaceae",
+		"rzad": "Gentianales",
+		"nadrzad": "Tubiflorae",
+		"podklasa": "Asteridae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4304, "rodz_id": 289, "rodzaj": "Vinca",
+	"nzw_gat": "minor", "gatunek": "Vinca minor", "autor_gat": "L.",
+	"n_lacinska": "Vinca minor L.", "n_polska": "Barwinek pospolity", "chroniony": "s",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Apocynaceae",
+		"rzad": "Gentianales",
+		"nadrzad": "Tubiflorae",
+		"podklasa": "Asteridae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4305, "rodz_id": 745, "rodzaj": "Vincetoxicum",
+	"nzw_gat": "hirundinaria", "gatunek": "Vincetoxicum hirundinaria", "autor_gat": "Medik.",
+	"n_lacinska": "Vincetoxicum hirundinaria Medik.", "n_polska": "Ciemiężyk białokwiatowy",
+	"synonyms": [
+		{ "syn_id": 671, "nzw_gat": "officinale", "gatunek": "Vincetoxicum officinale", "autor_gat": "Moench", "synantrop": "" }
+	],
+	"branch": {
+		"rodzina": "Asclepiadaceae",
+		"rzad": "Gentianales",
+		"nadrzad": "Tubiflorae",
+		"podklasa": "Asteridae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4306, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "alba", "gatunek": "Viola alba", "autor_gat": "Besser",
+	"n_lacinska": "Viola alba Besser", "n_polska": "Fiołek biały", "wymarly": "P",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4307, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "alpina", "gatunek": "Viola alpina", "autor_gat": "Jacq.",
+	"n_lacinska": "Viola alpina Jacq.", "n_polska": "Fiołek alpejski",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4308, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "arvensis", "gatunek": "Viola arvensis", "autor_gat": "Murray",
+	"n_lacinska": "Viola arvensis Murray", "n_polska": "Fiołek polny",
+	"synantrop": "A",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4309, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "biflora", "gatunek": "Viola biflora", "autor_gat": "L.",
+	"n_lacinska": "Viola biflora L.", "n_polska": "Fiołek dwukwiatowy",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4310, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "canina", "gatunek": "Viola canina", "autor_gat": "L.",
+	"n_lacinska": "Viola canina L.", "n_polska": "Fiołek psi",
+	"synonyms": [
+		{ "syn_id": 672, "nzw_gat": "canina", "gatunek": "Viola canina", "autor_gat": "Rchb.", "synantrop": "" }
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4311, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "collina", "gatunek": "Viola collina", "autor_gat": "Besser",
+	"n_lacinska": "Viola collina Besser", "n_polska": "Fiołek pagórkowy",
+	"n_p_g_htm": "<A HREF=\"ck-przpl.htm#565\">565</A>",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4312, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "cornuta", "gatunek": "Viola cornuta", "autor_gat": "L.",
+	"n_lacinska": "Viola cornuta L.", "n_polska": "Fiołek rogaty",
+	"synantrop": "U",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4313, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "cyanea", "gatunek": "Viola cyanea", "autor_gat": "Čelak.",
+	"n_lacinska": "Viola cyanea Čelak.", "n_polska": "Fiołek bławatkowy",
+	"n_p_g_htm": "<A HREF=\"ck-przpl.htm#548\">548</A>",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4314, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "dacica", "gatunek": "Viola dacica", "autor_gat": "Borbás",
+	"n_lacinska": "Viola dacica Borbás", "n_polska": "Fiołek dacki",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4315, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "elatior", "gatunek": "Viola elatior", "autor_gat": "Fr.",
+	"n_lacinska": "Viola elatior Fr.", "n_polska": "Fiołek wyniosły",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4316, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "epipsila", "gatunek": "Viola epipsila", "autor_gat": "Ledeb.",
+	"n_lacinska": "Viola epipsila Ledeb.", "n_polska": "Fiołek torfowy",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4317, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "hirta", "gatunek": "Viola hirta", "autor_gat": "L.",
+	"n_lacinska": "Viola hirta L.", "n_polska": "Fiołek kosmaty",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4318, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "kitaibeliana", "gatunek": "Viola kitaibeliana", "autor_gat": "Roem. & Schult.",
+	"n_lacinska": "Viola kitaibeliana Roem. & Schult.", "n_polska": "Fiołek Kitaibela",
+	"synantrop": "E",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4319, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "lutea", "gatunek": "Viola lutea", "autor_gat": "Huds.",
+	"n_lacinska": "Viola lutea Huds.", "n_polska": "Fiołek żółty",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4320, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "lutea", "gatunek": "Viola lutea", "autor_gat": "Huds.",
+	"podgatunek": "subsp. sudetica", "autor_pgat": "(Willd.) W. Becker",
+	"n_lacinska": "Viola lutea Huds. subsp. sudetica (Willd.) W. Becker", "n_polska": "Fiołek żółty sudecki",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4321, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "mirabilis", "gatunek": "Viola mirabilis", "autor_gat": "L.",
+	"n_lacinska": "Viola mirabilis L.", "n_polska": "Fiołek przedziwny",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4322, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "montana", "gatunek": "Viola montana", "autor_gat": "L.",
+	"n_lacinska": "Viola montana L.", "n_polska": "Fiołek nibypsi",
+	"n_p_g_htm": "<A HREF=\"ck-przpl.htm#566\">566</A>",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4323, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "odorata", "gatunek": "Viola odorata", "autor_gat": "L.",
+	"n_lacinska": "Viola odorata L.", "n_polska": "Fiołek wonny (F. pachnący)",
+	"synantrop": "pA",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4324, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "palustris", "gatunek": "Viola palustris", "autor_gat": "L.",
+	"n_lacinska": "Viola palustris L.", "n_polska": "Fiołek błotny",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4325, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "porphyrea", "gatunek": "Viola porphyrea", "autor_gat": "R. Uechtr.",
+	"n_lacinska": "Viola porphyrea R. Uechtr.", "bledny": 1,
+	"n_p_g_htm": "<A HREF=\"ck-przpl.htm#565\">565</A>",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4326, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "pumila", "gatunek": "Viola pumila", "autor_gat": "Chaix",
+	"n_lacinska": "Viola pumila Chaix", "n_polska": "Fiołek drobny",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4327, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "reichenbachiana", "gatunek": "Viola reichenbachiana", "autor_gat": "Jord. ex Boreau",
+	"n_lacinska": "Viola reichenbachiana Jord. ex Boreau", "n_polska": "Fiołek leśny",
+	"synonyms": [
+		{ "syn_id": 673, "nzw_gat": "silvestris", "gatunek": "Viola silvestris", "autor_gat": "Rchb.", "synantrop": "" }
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4328, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "riviniana", "gatunek": "Viola riviniana", "autor_gat": "Rchb.",
+	"n_lacinska": "Viola riviniana Rchb.", "n_polska": "Fiołek Rivina",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4329, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "rupestris", "gatunek": "Viola rupestris", "autor_gat": "F. W. Schmidt",
+	"n_lacinska": "Viola rupestris F. W. Schmidt", "n_polska": "Fiołek skalny",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4330, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "saxatilis", "gatunek": "Viola saxatilis", "autor_gat": "F. W. Schmidt",
+	"n_lacinska": "Viola saxatilis F. W. Schmidt", "n_polska": "Fiołek trwały",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4331, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "stagnina", "gatunek": "Viola stagnina", "autor_gat": "Kit.",
+	"n_lacinska": "Viola stagnina Kit.", "n_polska": "Fiołek mokradłowy",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4332, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "tricolor", "gatunek": "Viola tricolor", "autor_gat": "L. s. s.",
+	"n_lacinska": "Viola tricolor L. s. s.", "n_polska": "Fiołek trójbarwny",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4333, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "uliginosa", "gatunek": "Viola uliginosa", "autor_gat": "Besser",
+	"n_lacinska": "Viola uliginosa Besser", "n_polska": "Fiołek bagienny",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4334, "rodz_id": 148, "rodzaj": "Viola",
+	"nzw_gat": "x wittrockiana", "gatunek": "Viola x wittrockiana", "autor_gat": "hort.",
+	"n_lacinska": "Viola x wittrockiana hort.", "n_polska": "Fiołek ogrodowy (Bratek)",
+	"synantrop": "U",
+	"synonyms": [
+		{ "syn_id": 706, "nzw_gat": "x wittrockiana", "gatunek": "Viola x wittrockiana", "autor_gat": "Gams", "synantrop": "U" }
+	],
+	"branch": {
+		"rodzina": "Violaceae",
+		"rzad": "Violales",
+		"nadrzad": "Cistiflorae",
+		"podklasa": "Dilleniidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4335, "rodz_id": 223, "rodzaj": "Virga",
+	"nzw_gat": "pilosa", "gatunek": "Virga pilosa", "autor_gat": "(L.) Hill",
+	"n_lacinska": "Virga pilosa (L.) Hill", "n_polska": "Szczeciniastka (Szczeć) owłosiona",
+	"synonyms": [
+		{ "syn_id": 237, "nzw_gat": "pilosus", "gatunek": "Dipsacus pilosus", "autor_gat": "L.", "synantrop": "" }
+	],
+	"branch": {
+		"rodzina": "Dipsacaceae",
+		"rzad": "Dipsacales",
+		"nadrzad": "Tubiflorae",
+		"podklasa": "Asteridae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4336, "rodz_id": 677, "rodzaj": "Viscaria",
+	"nzw_gat": "vulgaris", "gatunek": "Viscaria vulgaris", "autor_gat": "Röhl.",
+	"n_lacinska": "Viscaria vulgaris Röhl.", "n_polska": "Smółka pospolita",
+	"synonyms": [
+		{ "syn_id": 1013, "nzw_gat": "viscaria", "gatunek": "Lychnis viscaria", "autor_gat": "L.", "synantrop": "" }
+	],
+	"branch": {
+		"rodzina": "Caryophyllaceae",
+		"rzad": "Caryophyllales",
+		"nadrzad": "",
+		"podklasa": "Centrospermae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4337, "rodz_id": 541, "rodzaj": "Viscum",
+	"nzw_gat": "album", "gatunek": "Viscum album", "autor_gat": "L.",
+	"n_lacinska": "Viscum album L.", "n_polska": "Jemioła pospolita",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Loranthaceae",
+		"rzad": "Santalales",
+		"nadrzad": "Disciflorae",
+		"podklasa": "Rosidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4338, "rodz_id": 541, "rodzaj": "Viscum",
+	"nzw_gat": "album", "gatunek": "Viscum album", "autor_gat": "L.",
+	"podgatunek": "subsp. abietis", "autor_pgat": "(Wiesb.) Abrom.",
+	"n_lacinska": "Viscum album L. subsp. abietis (Wiesb.) Abrom.", "n_polska": "Jemioła pospolita jodłowa",
+	"synonyms": [
+		{ "syn_id": 617, "nzw_gat": "abietis", "gatunek": "Viscum abietis", "autor_gat": "Beck", "synantrop": "" },
+		{ "syn_id": 668, "nzw_gat": "austriacum", "gatunek": "Viscum austriacum", "autor_gat": "Wiesb.", "synantrop": "" }
+	],
+	"branch": {
+		"rodzina": "Loranthaceae",
+		"rzad": "Santalales",
+		"nadrzad": "Disciflorae",
+		"podklasa": "Rosidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4339, "rodz_id": 541, "rodzaj": "Viscum",
+	"nzw_gat": "album", "gatunek": "Viscum album", "autor_gat": "L.",
+	"podgatunek": "subsp. album", "autor_pgat": "",
+	"n_lacinska": "Viscum album L. subsp. album", "n_polska": "Jemioła pospolita typowa",
+	"synonyms": [
+		{ "syn_id": 674, "nzw_gat": "album", "gatunek": "Viscum album", "autor_gat": "L. s. s.", "synantrop": "" }
+	],
+	"branch": {
+		"rodzina": "Loranthaceae",
+		"rzad": "Santalales",
+		"nadrzad": "Disciflorae",
+		"podklasa": "Rosidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4340, "rodz_id": 541, "rodzaj": "Viscum",
+	"nzw_gat": "album", "gatunek": "Viscum album", "autor_gat": "L.",
+	"podgatunek": "subsp. austriacum", "autor_pgat": "(Wiesb.) Vollm.",
+	"n_lacinska": "Viscum album L. subsp. austriacum (Wiesb.) Vollm.", "n_polska": "Jemioła pospolita rozpierzchła",
+	"synonyms": [
+		{ "syn_id": 667, "nzw_gat": "austriacum", "gatunek": "Viscum austriacum", "autor_gat": "Wiesb.", "synantrop": "" },
+		{ "syn_id": 675, "nzw_gat": "laxum", "gatunek": "Viscum laxum", "autor_gat": "Boiss.", "synantrop": "" }
+	],
+	"branch": {
+		"rodzina": "Loranthaceae",
+		"rzad": "Santalales",
+		"nadrzad": "Disciflorae",
+		"podklasa": "Rosidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4341, "rodz_id": 452, "rodzaj": "Vitis",
+	"nzw_gat": "vinifera", "gatunek": "Vitis vinifera", "autor_gat": "L.",
+	"n_lacinska": "Vitis vinifera L.", "n_polska": "Winorośl właściwa",
+	"synantrop": "U",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Vitaceae",
+		"rzad": "Rhamnales",
+		"nadrzad": "Disciflorae",
+		"podklasa": "Rosidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4342, "rodz_id": 452, "rodzaj": "Vitis",
+	"nzw_gat": "vinifera", "gatunek": "Vitis vinifera", "autor_gat": "L.",
+	"podgatunek": "subsp. sylvestris", "autor_pgat": "(C. C. Gmel.) Hegi",
+	"n_lacinska": "Vitis vinifera L. subsp. sylvestris (C. C. Gmel.) Hegi", "n_polska": "Winorośl właściwa dzika",
+	"synantrop": "U",
+	"synonyms": [
+		{ "syn_id": 707, "nzw_gat": "silvestris", "gatunek": "Vitis silvestris", "autor_gat": "C. C. Gmel.", "synantrop": "U" }
+	],
+	"branch": {
+		"rodzina": "Vitaceae",
+		"rzad": "Rhamnales",
+		"nadrzad": "Disciflorae",
+		"podklasa": "Rosidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4343, "rodz_id": 452, "rodzaj": "Vitis",
+	"nzw_gat": "vinifera", "gatunek": "Vitis vinifera", "autor_gat": "L.",
+	"podgatunek": "subsp. vinifera", "autor_pgat": "",
+	"n_lacinska": "Vitis vinifera L. subsp. vinifera", "n_polska": "Winorośl właściwa typowa",
+	"synantrop": "U",
+	"synonyms": [
+		{ "syn_id": 708, "nzw_gat": "vinifera", "gatunek": "Vitis vinifera", "autor_gat": "L.", "synantrop": "U" }
+	],
+	"branch": {
+		"rodzina": "Vitaceae",
+		"rzad": "Rhamnales",
+		"nadrzad": "Disciflorae",
+		"podklasa": "Rosidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4344, "rodz_id": 803, "rodzaj": "Volutaria",
+	"nzw_gat": "lippii", "gatunek": "Volutaria lippii", "autor_gat": "(L.) Maire",
+	"n_lacinska": "Volutaria lippii (L.) Maire",
+	"synantrop": "E",
+	"synonyms": [
+		{ "syn_id": 360, "nzw_gat": "lippii", "gatunek": "Centaurea lippii", "autor_gat": "L.", "synantrop": "E" }
+	],
+	"branch": {
+		"rodzina": "Asteraceae",
+		"rzad": "Asterales",
+		"nadrzad": "Campanulatae",
+		"podklasa": "Asteridae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4345, "rodz_id": 490, "rodzaj": "Vulpia",
+	"nzw_gat": "bromoides", "gatunek": "Vulpia bromoides", "autor_gat": "(L.) S. F. Gray",
+	"n_lacinska": "Vulpia bromoides (L.) S. F. Gray", "n_polska": "Wulpia stokłosowata",
+	"synantrop": "E",
+	"synonyms": [
+		{ "syn_id": 1089, "nzw_gat": "sciuroides", "gatunek": "Festuca sciuroides", "autor_gat": "Roth", "synantrop": "E" }
+	],
+	"branch": {
+		"rodzina": "Poaceae",
+		"rzad": "Poales",
+		"nadrzad": "",
+		"podklasa": "Farinosae",
+		"klasa": "Monocotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4346, "rodz_id": 490, "rodzaj": "Vulpia",
+	"nzw_gat": "ciliata", "gatunek": "Vulpia ciliata", "autor_gat": "Dumort.",
+	"n_lacinska": "Vulpia ciliata Dumort.",
+	"synantrop": "E",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Poaceae",
+		"rzad": "Poales",
+		"nadrzad": "",
+		"podklasa": "Farinosae",
+		"klasa": "Monocotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4347, "rodz_id": 490, "rodzaj": "Vulpia",
+	"nzw_gat": "geniculata", "gatunek": "Vulpia geniculata", "autor_gat": "(L.) Link",
+	"n_lacinska": "Vulpia geniculata (L.) Link",
+	"synantrop": "E",
+	"synonyms": [
+		{ "syn_id": 710, "nzw_gat": "geniculata", "gatunek": "Vulpia geniculata", "autor_gat": "(L.) Desf.", "synantrop": "E" }
+	],
+	"branch": {
+		"rodzina": "Poaceae",
+		"rzad": "Poales",
+		"nadrzad": "",
+		"podklasa": "Farinosae",
+		"klasa": "Monocotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4348, "rodz_id": 490, "rodzaj": "Vulpia",
+	"nzw_gat": "myuros", "gatunek": "Vulpia myuros", "autor_gat": "(L.) C. C. Gmel.",
+	"n_lacinska": "Vulpia myuros (L.) C. C. Gmel.", "n_polska": "Wulpia mysi ogon",
+	"synonyms": [
+		{ "syn_id": 841, "nzw_gat": "myuros", "gatunek": "Festuca myuros", "autor_gat": "L.", "synantrop": "" }
+	],
+	"branch": {
+		"rodzina": "Poaceae",
+		"rzad": "Poales",
+		"nadrzad": "",
+		"podklasa": "Farinosae",
+		"klasa": "Monocotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4349, "rodz_id": 82, "rodzaj": "Waldsteinia",
+	"nzw_gat": "geoides", "gatunek": "Waldsteinia geoides", "autor_gat": "Willd.",
+	"n_lacinska": "Waldsteinia geoides Willd.", "n_polska": "Pragnia kuklikowata",
+	"synantrop": "U",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Rosaceae",
+		"rzad": "Rosales",
+		"nadrzad": "Rosiflorae",
+		"podklasa": "Rosidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4350, "rodz_id": 82, "rodzaj": "Waldsteinia",
+	"nzw_gat": "ternata", "gatunek": "Waldsteinia ternata", "autor_gat": "(Stephan) Fritsch",
+	"n_lacinska": "Waldsteinia ternata (Stephan) Fritsch", "n_polska": "Pragnia syberyjska",
+	"synantrop": "U",
+	"synonyms": [
+		{ "syn_id": 711, "nzw_gat": "sibirica", "gatunek": "Waldsteinia sibirica", "autor_gat": "Tratt.", "synantrop": "U" },
+		{ "syn_id": 712, "nzw_gat": "trifolia", "gatunek": "Waldsteinia trifolia", "autor_gat": "Rochel ex W. D. J. Koch", "synantrop": "U" }
+	],
+	"branch": {
+		"rodzina": "Rosaceae",
+		"rzad": "Rosales",
+		"nadrzad": "Rosiflorae",
+		"podklasa": "Rosidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4351, "rodz_id": 843, "rodzaj": "Weigela",
+	"nzw_gat": "florida", "gatunek": "Weigela florida", "autor_gat": "DC.",
+	"n_lacinska": "Weigela florida DC.", "n_polska": "Krzewuszka (Wajgelia) cudowna",
+	"synantrop": "U",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Caprifoliaceae",
+		"rzad": "Dipsacales",
+		"nadrzad": "Tubiflorae",
+		"podklasa": "Asteridae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4352, "rodz_id": 367, "rodzaj": "Wisteria",
+	"nzw_gat": "floribunda", "gatunek": "Wisteria floribunda", "autor_gat": "DC.",
+	"n_lacinska": "Wisteria floribunda DC.", "n_polska": "Słodlin (Glicynia) japoński",
+	"synantrop": "U",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Fabaceae",
+		"rzad": "Fabales",
+		"nadrzad": "Rosiflorae",
+		"podklasa": "Rosidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4353, "rodz_id": 367, "rodzaj": "Wisteria",
+	"nzw_gat": "sinensis", "gatunek": "Wisteria sinensis", "autor_gat": "(Sims) Sweet",
+	"n_lacinska": "Wisteria sinensis (Sims) Sweet", "n_polska": "Słodlin (Glicynia) chiński",
+	"synantrop": "U",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Fabaceae",
+		"rzad": "Fabales",
+		"nadrzad": "Rosiflorae",
+		"podklasa": "Rosidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4354, "rodz_id": 688, "rodzaj": "Wolffia",
+	"nzw_gat": "arrhiza", "gatunek": "Wolffia arrhiza", "autor_gat": "(L.) Horkel ex Wimm.",
+	"n_lacinska": "Wolffia arrhiza (L.) Horkel ex Wimm.", "n_polska": "Wolffia bezkorzeniowa",
+	"synonyms": [
+		{ "syn_id": 676, "nzw_gat": "arrhiza", "gatunek": "Wolffia arrhiza", "autor_gat": "(L.) Wimm.", "synantrop": "" },
+		{ "syn_id": 677, "nzw_gat": "arrhiza", "gatunek": "Wolffia arrhiza", "autor_gat": "Wimm.", "synantrop": "" }
+	],
+	"branch": {
+		"rodzina": "Lemnaceae",
+		"rzad": "Arales",
+		"nadrzad": "",
+		"podklasa": "Spadiciflorae",
+		"klasa": "Monocotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4355, "rodz_id": 853, "rodzaj": "Woodsia",
+	"nzw_gat": "alpina", "gatunek": "Woodsia alpina", "autor_gat": "(Bolton) S. F. Gray",
+	"n_lacinska": "Woodsia alpina (Bolton) S. F. Gray", "n_polska": "Rozrzutka alpejska",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Athyriaceae",
+		"rzad": "Polypodiales",
+		"nadrzad": "",
+		"podklasa": "",
+		"klasa": "Leptosporangiatae",
+		"podgromada": "Pterophytina",
+		"gromada": "Pteridophyta"
+	}
+}{
+	"nr_kol": 4356, "rodz_id": 853, "rodzaj": "Woodsia",
+	"nzw_gat": "ilvensis", "gatunek": "Woodsia ilvensis", "autor_gat": "(L.) R. Br.",
+	"n_lacinska": "Woodsia ilvensis (L.) R. Br.", "n_polska": "Rozrzutka brunatna",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Athyriaceae",
+		"rzad": "Polypodiales",
+		"nadrzad": "",
+		"podklasa": "",
+		"klasa": "Leptosporangiatae",
+		"podgromada": "Pterophytina",
+		"gromada": "Pteridophyta"
+	}
+}{
+	"nr_kol": 4357, "rodz_id": 192, "rodzaj": "Xanthium",
+	"nzw_gat": "albinum", "gatunek": "Xanthium albinum", "autor_gat": "(Widder) H. Scholz",
+	"n_lacinska": "Xanthium albinum (Widder) H. Scholz", "n_polska": "Rzepień włoski (Rz. brzegowy)",
+	"synantrop": "A",
+	"synonyms": [
+		{ "syn_id": 714, "nzw_gat": "riparium", "gatunek": "Xanthium riparium", "autor_gat": "Itzigs. & Hertsch", "synantrop": "A" }
+	],
+	"branch": {
+		"rodzina": "Asteraceae",
+		"rzad": "Asterales",
+		"nadrzad": "Campanulatae",
+		"podklasa": "Asteridae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4358, "rodz_id": 192, "rodzaj": "Xanthium",
+	"nzw_gat": "macrocarpum", "gatunek": "Xanthium macrocarpum", "autor_gat": "DC.",
+	"n_lacinska": "Xanthium macrocarpum DC.",
+	"synantrop": "E",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Asteraceae",
+		"rzad": "Asterales",
+		"nadrzad": "Campanulatae",
+		"podklasa": "Asteridae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4359, "rodz_id": 192, "rodzaj": "Xanthium",
+	"nzw_gat": "spinosum", "gatunek": "Xanthium spinosum", "autor_gat": "L.",
+	"n_lacinska": "Xanthium spinosum L.", "n_polska": "Rzepień kolczasty (Rz. ciernisty)",
+	"synantrop": "A",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Asteraceae",
+		"rzad": "Asterales",
+		"nadrzad": "Campanulatae",
+		"podklasa": "Asteridae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4360, "rodz_id": 192, "rodzaj": "Xanthium",
+	"nzw_gat": "strumarium", "gatunek": "Xanthium strumarium", "autor_gat": "L.",
+	"n_lacinska": "Xanthium strumarium L.", "n_polska": "Rzepień pospolity",
+	"synantrop": "A",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Asteraceae",
+		"rzad": "Asterales",
+		"nadrzad": "Campanulatae",
+		"podklasa": "Asteridae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4361, "rodz_id": 587, "rodzaj": "Xeranthemum",
+	"nzw_gat": "annuum", "gatunek": "Xeranthemum annuum", "autor_gat": "L.",
+	"n_lacinska": "Xeranthemum annuum L.", "n_polska": "Suchokwiat roczny",
+	"synantrop": "U",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Asteraceae",
+		"rzad": "Asterales",
+		"nadrzad": "Campanulatae",
+		"podklasa": "Asteridae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4362, "rodz_id": 499, "rodzaj": "Yucca",
+	"nzw_gat": "filamentosa", "gatunek": "Yucca filamentosa", "autor_gat": "L.",
+	"n_lacinska": "Yucca filamentosa L.", "n_polska": "Jukka (Krępla, Szpilecznica) karolińska",
+	"synantrop": "U",
+	"synonyms": [
+		{ "syn_id": 715, "nzw_gat": "angustifolia", "gatunek": "Yucca angustifolia", "autor_gat": "hort. non Pursh", "synantrop": "U" }
+	],
+	"branch": {
+		"rodzina": "Agavaceae",
+		"rzad": "Liliales",
+		"nadrzad": "",
+		"podklasa": "Liliiflorae",
+		"klasa": "Monocotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4363, "rodz_id": 499, "rodzaj": "Yucca",
+	"nzw_gat": "flaccida", "gatunek": "Yucca flaccida", "autor_gat": "Haw.",
+	"n_lacinska": "Yucca flaccida Haw.", "n_polska": "Jukka (Krępla, Szpilecznica) wirginijska (J. zwisła)",
+	"synantrop": "U",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Agavaceae",
+		"rzad": "Liliales",
+		"nadrzad": "",
+		"podklasa": "Liliiflorae",
+		"klasa": "Monocotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4364, "rodz_id": 257, "rodzaj": "Zannichellia",
+	"nzw_gat": "palustris", "gatunek": "Zannichellia palustris", "autor_gat": "L.",
+	"n_lacinska": "Zannichellia palustris L.", "n_polska": "Zamętnica błotna",
+	"n_p_g_htm": "<A HREF=\"ck-przpl.htm#550\">550</A>",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Zannichelliaceae",
+		"rzad": "Potamogetonales",
+		"nadrzad": "",
+		"podklasa": "Helobiae",
+		"klasa": "Monocotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4365, "rodz_id": 257, "rodzaj": "Zannichellia",
+	"nzw_gat": "palustris", "gatunek": "Zannichellia palustris", "autor_gat": "L.",
+	"podgatunek": "subsp. palustris", "autor_pgat": "",
+	"n_lacinska": "Zannichellia palustris L. subsp. palustris", "n_polska": "Zamętnica błotna typowa",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Zannichelliaceae",
+		"rzad": "Potamogetonales",
+		"nadrzad": "",
+		"podklasa": "Helobiae",
+		"klasa": "Monocotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4366, "rodz_id": 257, "rodzaj": "Zannichellia",
+	"nzw_gat": "palustris", "gatunek": "Zannichellia palustris", "autor_gat": "L.",
+	"podgatunek": "subsp. pedicellata", "autor_pgat": "(Wahlenb. & Rosén) Hegi",
+	"n_lacinska": "Zannichellia palustris L. subsp. pedicellata (Wahlenb. & Rosén) Hegi", "n_polska": "Zamętnica błotna trzoneczkowata",
+	"synonyms": [
+		{ "syn_id": 678, "nzw_gat": "pedicellata", "gatunek": "Zannichellia pedicellata", "autor_gat": "(Wahlenb. & Rosén) Fr.", "synantrop": "" },
+		{ "syn_id": 679, "nzw_gat": "pedicellata", "gatunek": "Zannichellia pedicellata", "autor_gat": "Fr.", "synantrop": "" }
+	],
+	"branch": {
+		"rodzina": "Zannichelliaceae",
+		"rzad": "Potamogetonales",
+		"nadrzad": "",
+		"podklasa": "Helobiae",
+		"klasa": "Monocotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4367, "rodz_id": 474, "rodzaj": "Zea",
+	"nzw_gat": "mays", "gatunek": "Zea mays", "autor_gat": "L.",
+	"n_lacinska": "Zea mays L.", "n_polska": "Kukurydza zwyczajna",
+	"synantrop": "U",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Poaceae",
+		"rzad": "Poales",
+		"nadrzad": "",
+		"podklasa": "Farinosae",
+		"klasa": "Monocotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4368, "rodz_id": 867, "rodzaj": "Zinnia",
+	"nzw_gat": "elegans", "gatunek": "Zinnia elegans", "autor_gat": "Jacq.",
+	"n_lacinska": "Zinnia elegans Jacq.", "n_polska": "Cynia wytworna",
+	"synantrop": "U",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Asteraceae",
+		"rzad": "Asterales",
+		"nadrzad": "Campanulatae",
+		"podklasa": "Asteridae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4369, "rodz_id": 867, "rodzaj": "Zinnia",
+	"nzw_gat": "haageana", "gatunek": "Zinnia haageana", "autor_gat": "Regel",
+	"n_lacinska": "Zinnia haageana Regel", "n_polska": "Cynia wąskolistna",
+	"synantrop": "U",
+	"synonyms": [
+		{ "syn_id": 716, "nzw_gat": "angustifolia", "gatunek": "Zinnia angustifolia", "autor_gat": "auct. non Humb., Bonpl. & Kunth.", "synantrop": "U" },
+		{ "syn_id": 717, "nzw_gat": "mexicana", "gatunek": "Zinnia mexicana", "autor_gat": "hort. ex Vilm.", "synantrop": "U" }
+	],
+	"branch": {
+		"rodzina": "Asteraceae",
+		"rzad": "Asterales",
+		"nadrzad": "Campanulatae",
+		"podklasa": "Asteridae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4370, "rodz_id": 757, "rodzaj": "Zostera",
+	"nzw_gat": "marina", "gatunek": "Zostera marina", "autor_gat": "L.",
+	"n_lacinska": "Zostera marina L.", "n_polska": "Zostera morska",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Zosteraceae",
+		"rzad": "Potamogetonales",
+		"nadrzad": "",
+		"podklasa": "Helobiae",
+		"klasa": "Monocotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4371, "rodz_id": 757, "rodzaj": "Zostera",
+	"nzw_gat": "noltii", "gatunek": "Zostera noltii", "autor_gat": "Hornem.",
+	"n_lacinska": "Zostera noltii Hornem.", "n_polska": "Zostera drobna",
+	"synonyms": [
+		{ "syn_id": 680, "nzw_gat": "nana", "gatunek": "Zostera nana", "autor_gat": "Roth p. p.", "synantrop": "" }
+	],
+	"branch": {
+		"rodzina": "Zosteraceae",
+		"rzad": "Potamogetonales",
+		"nadrzad": "",
+		"podklasa": "Helobiae",
+		"klasa": "Monocotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4372, "rodz_id": 339, "rodzaj": "Zygophyllum",
+	"nzw_gat": "fabago", "gatunek": "Zygophyllum fabago", "autor_gat": "L.",
+	"n_lacinska": "Zygophyllum fabago L.", "n_polska": "Parolist wschodni",
+	"synantrop": "E",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Zygophyllaceae",
+		"rzad": "Geraniales",
+		"nadrzad": "Pinnatae",
+		"podklasa": "Rosidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4373, "rodz_id": 265, "rodzaj": "xCalammophila",
+	"nzw_gat": "baltica", "gatunek": "xCalammophila baltica", "autor_gat": "(Flüggé ex Schrad.) Brand",
+	"n_lacinska": "xCalammophila baltica (Flüggé ex Schrad.) Brand", "n_polska": "Trzcinnikownica nadbrzeżna",
+	"n_p_g_htm": "<A HREF=\"ck-przpl.htm#63\">63</A>",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Poaceae",
+		"rzad": "Poales",
+		"nadrzad": "",
+		"podklasa": "Farinosae",
+		"klasa": "Monocotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4374, "rodz_id": 509, "rodzaj": "xFestulolium",
+	"nzw_gat": "adscendens", "gatunek": "xFestulolium adscendens", "autor_gat": "(Retz.) Asch. & Graebn.",
+	"n_lacinska": "xFestulolium adscendens (Retz.) Asch. & Graebn.", "n_polska": "Kostrzyca łukowata",
+	"n_p_g_htm": "<A HREF=\"ck-przpl.htm#134\">134</A>",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Poaceae",
+		"rzad": "Poales",
+		"nadrzad": "",
+		"podklasa": "Farinosae",
+		"klasa": "Monocotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}{
+	"nr_kol": 4375, "rodz_id": 85, "rodzaj": "Orlaya",
+	"nzw_gat": "grandiflora", "gatunek": "Orlaya grandiflora", "autor_gat": "(L.) Hoffm.",
+	"n_lacinska": "Orlaya grandiflora (L.) Hoffm.",
+	"synantrop": "E",
+	"synonyms": [
+	],
+	"branch": {
+		"rodzina": "Apiaceae",
+		"rzad": "Apiales",
+		"nadrzad": "Umbelliflorae",
+		"podklasa": "Rosidae",
+		"klasa": "Dicotyledoneae",
+		"podgromada": "Angiospermae",
+		"gromada": "Spermatophyta"
+	}
+}
