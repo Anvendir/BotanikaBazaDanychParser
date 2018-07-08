@@ -14,16 +14,19 @@ class RawDataBaseFormater:
             l_speciesList[i] = self.__removeSynonymsFieldFromSingleSpeciesRecord(l_speciesList[i])
             l_speciesList[i] = self.__removeBranchLabelFromSingleSpeciesRecord(l_speciesList[i])  
             l_speciesList[i] = self.__addBackslashToApostropheInSingleSpeciesRecord(l_speciesList[i])
-
-        self.__removingEmptyRecordsFromList(l_speciesList)
+        
+        l_speciesList = self.__removingEmptyRecordsFromList(l_speciesList)
         print "Formating species list finished."
         return l_speciesList
 
     def __removingEmptyRecordsFromList(self, p_formatedList):
         print "Removing empty elements from formated species list."
         print("List length before: " + str(len(p_formatedList)) + ".")
-        p_formatedList.remove("")
+        
+        p_formatedList = filter(lambda l_singleElemnt: l_singleElemnt != "", p_formatedList)
+
         print("List length after: " + str(len(p_formatedList)) + ".")
+        return p_formatedList 
 
     def __makeSingleSpeciesSingleListRecord(self, p_dataBase):
         return re.split("}{", p_dataBase); 
