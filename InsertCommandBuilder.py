@@ -4,8 +4,8 @@
 import re
 
 class InsertCommandBuilder:
-    def prepareInsertCommandsForSpeciesList(self, p_formatedSpeciesList):
-        l_outputFileName = "insertCommandsForAllSpeciesList.txt" 
+    def prepareInsertCommandsForSpeciesList(self, p_formatedSpeciesList, p_outputDirName):
+        l_outputFileName = p_outputDirName + "/insertCommandsForAllSpeciesList.txt" 
         l_outputFile = open(l_outputFileName, "w")
 
         for l_speciesRecord in p_formatedSpeciesList:
@@ -38,28 +38,32 @@ class InsertCommandBuilder:
 
     def __prepareTableSystematykaFieldsName(self):
         return "(`id`," + \
-                " `nazwa lacinska`," + \
-                " `nazwa polska`," \
-                " `nazwa lacinska + autor`," \
-                " `autor`," \
-                " `synantrop`," \
-                " `gatunek`," \
-                " `gatunek_pl`," \
-                " `rodzaj`," \
-                " `rodzaj_pl`," \
-                " `rodzina`," \
-                " `rzad`," \
-                " `nadrzad`," \
-                " `podklasa`," \
-                " `klasa`," \
-                " `podgromada`," \
-                " `gromada`)"
+               " `nazwa lacinska`," + \
+               " `nazwa polska`," \
+               " `nazwa lacinska + autor`," \
+               " `autor`," \
+               " `autor podgatunku`," \
+               " `synantrop`," \
+               " `podgatunek`," \
+               " `podgatunek_pl`," \
+               " `gatunek`," \
+               " `gatunek_pl`," \
+               " `rodzaj`," \
+               " `rodzaj_pl`," \
+               " `rodzina`," \
+               " `rzad`," \
+               " `nadrzad`," \
+               " `podklasa`," \
+               " `klasa`," \
+               " `podgromada`," \
+               " `gromada`)"
 
     def __prepareValuesFromAllFields(self, p_speciesRecord):
         l_latinName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "gatunek")
         l_polishName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "n_polska")
         l_latinNamePlusAuthor = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "n_lacinska")
         l_author = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "autor_gat") 
+        l_authorSubsp = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "autor_pgat") 
         l_synantrop = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "synantrop")
 
         l_systemathicHierarchy = self.__prepareSystematicHierarchy(p_speciesRecord, l_latinName, l_polishName)
@@ -68,12 +72,15 @@ class InsertCommandBuilder:
                                 l_polishName + ", " + \
                                 l_latinNamePlusAuthor + ", " + \
                                 l_author + ", " + \
+                                l_authorSubsp + ", " + \
                                 l_synantrop + ", " + \
                                 l_systemathicHierarchy
 
         return l_valuesFromAllFields 
 
     def __prepareSystematicHierarchy(self, p_speciesRecord, p_latinName, p_polishName):
+        l_subSpeciesLatin = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "podgatunek")
+        l_subSpeciesPolish = self.__getSubSpeciesNameFromName(p_polishName)
         l_speciesLatin = self.__getSpeciesNameFromName(p_latinName)
         l_speciesPolish = self.__getSpeciesNameFromName(p_polishName)
         l_genusLatin = self.__getGenusNameFromName(p_latinName)
@@ -86,7 +93,9 @@ class InsertCommandBuilder:
         l_subdivision = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "podgromada")
         l_division = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "gromada")
 
-        l_systemathicHierarchy = l_speciesLatin + ", " + \
+        l_systemathicHierarchy = l_subSpeciesLatin + ", " + \
+                                 l_subSpeciesPolish + ", " + \
+                                 l_speciesLatin + ", " + \
                                  l_speciesPolish + ", " + \
                                  l_genusLatin + ", " + \
                                  l_genusPolish + ", " + \
@@ -100,18 +109,32 @@ class InsertCommandBuilder:
 
         return l_systemathicHierarchy 
 
+    def __getSubSpeciesNameFromName(self, p_name):
+        l_nameAsListFirstElementGenusSecondSpeciesThirdSubSpecies = re.split(" ", p_name)
+
+        if 3 == len(l_nameAsListFirstElementGenusSecondSpeciesThirdSubSpecies):
+            return "'" + l_nameAsListFirstElementGenusSecondSpeciesThirdSubSpecies[2]
+        elif 3 < len(l_nameAsListFirstElementGenusSecondSpeciesThirdSubSpecies):
+            return "'" + l_nameAsListFirstElementGenusSecondSpeciesThirdSubSpecies[2] + "'"
+        else:
+            return "''"
+
     def __getSpeciesNameFromName(self, p_name):
         l_nameAsListFirstElementGenusSecondSpecies = re.split(" ", p_name)
 
         if 2 == len(l_nameAsListFirstElementGenusSecondSpecies):
             return "'" + l_nameAsListFirstElementGenusSecondSpecies[1]
+        elif 2 < len(l_nameAsListFirstElementGenusSecondSpecies): 
+            return "'" + l_nameAsListFirstElementGenusSecondSpecies[1] + "'"
         else:
             return "''"
 
     def __getGenusNameFromName(self, p_name):
         l_nameAsListFirstElementGenusSecondSpecies = re.split(" ", p_name)
         
-        if 2 == len(l_nameAsListFirstElementGenusSecondSpecies):
+        if 1 == len(l_nameAsListFirstElementGenusSecondSpecies): 
+            return l_nameAsListFirstElementGenusSecondSpecies[0]
+        elif 1 < len(l_nameAsListFirstElementGenusSecondSpecies):
             return l_nameAsListFirstElementGenusSecondSpecies[0] + "'"
         else:
             return "''"
