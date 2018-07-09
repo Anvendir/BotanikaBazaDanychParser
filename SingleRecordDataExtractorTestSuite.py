@@ -11,11 +11,66 @@ g_abiesCephalonica_correctRecord = '''"nr_kol": 2,"rodz_id": 607,"rodzaj": "Abie
 class SingleRecordDataExtractorTestSuite(unittest.TestCase):
     def testIfSingleRecordDataExtractorIsCreatedProperly(self):
         m_sut = SingleRecordDataExtractor()
-    
-    def testIfExtractingValueOfGenusInLatinFieldWorksForSimmpleCase(self):
+   
+    def testIfExtractingValueOfLatinNameFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
-        l_result = m_sut.getValueOfGivenFieldFromSpeciesRecord(g_abiesCephalonica_correctRecord, "rodzaj")
+        l_result = m_sut.getLatinName(g_abiesCephalonica_correctRecord)
+        assert l_result == "Abies cephalonica", "Actual value: " + l_result
+
+    def testIfExtractingValueOfPolishNameFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishName(g_abiesCephalonica_correctRecord)
+        assert l_result == "Jodła grecka", "Actual value: " + l_result
+
+    def testIfExtractingValueOfLatinNamePlusAuthorFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getLatinNameWithAuthor(g_abiesCephalonica_correctRecord)
+        assert l_result == "Abies cephalonica Loudon", "Actual value: " + l_result
+
+    def testIfExtractingValueOfAuthorFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getSpeciesAuthor(g_abiesCephalonica_correctRecord)
+        assert l_result == "Loudon", "Actual value: " + l_result
+
+    def testIfExtractingValueOfAuthorSubspFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getSubspeciesAuthor(g_abiesCephalonica_correctRecord)
+        assert l_result == "", "Actual value: " + l_result
+
+    def testIfExtractingValueOfSynantropFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getSynantrop(g_abiesCephalonica_correctRecord)
+        assert l_result == "U", "Actual value: " + l_result
+
+    def testIfExtractingValueOfSubspeciesInLatinFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getLatinSubspeciesName(g_abiesCephalonica_correctRecord)
+        assert l_result == "", "Actual value: " + l_result
+
+    def testIfExtractingValueOfSubspeciesInPolishFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishSubspeciesName(g_abiesCephalonica_correctRecord)
+        assert l_result == "", "Actual value: " + l_result
+
+    def testIfExtractingValueOfSpeciesInLatinFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getLatinSpeciesName(g_abiesCephalonica_correctRecord)
+        assert l_result == "cephalonica", "Actual value: " + l_result
+
+    def testIfExtractingValueOfSpeciesInPolishFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishSpeciesName(g_abiesCephalonica_correctRecord)
+        assert l_result == "grecka", "Actual value: " + l_result
+
+    def testIfExtractingValueOfGenusInLatinFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getLatinGenusName(g_abiesCephalonica_correctRecord)
         assert l_result == "Abies", "Actual value: " + l_result
+
+    def testIfExtractingValueOfGenusInPolishFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishGenusName(g_abiesCephalonica_correctRecord)
+        assert l_result == "Jodła", "Actual value: " + l_result
 
 if __name__ == "__main__":
     unittest.main()
