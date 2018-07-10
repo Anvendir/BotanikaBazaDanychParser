@@ -23,8 +23,8 @@ class SingleRecordDataExtractor:
         return self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "synantrop")
 
     def getLatinSubspeciesName(self, p_speciesRecord):
-        l_latinFullName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "gatunek")
-        return self.__getSubspeciesName(l_latinFullName)
+        l_latinSubspieciesNameWithPrefix = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "podgatunek")
+        return re.sub("subsp. ", "", l_latinSubspieciesNameWithPrefix)
 
     def getPolishSubspeciesName(self, p_speciesRecord):
         l_polishFullName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "n_polska")

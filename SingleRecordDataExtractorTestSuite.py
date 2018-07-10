@@ -8,6 +8,12 @@ from SingleRecordDataExtractor import SingleRecordDataExtractor
 
 g_abiesCephalonica_correctRecord = '''"nr_kol": 2,"rodz_id": 607,"rodzaj": "Abies","nzw_gat": "cephalonica","gatunek": "Abies cephalonica","autor_gat": "Loudon","n_lacinska": "Abies cephalonica Loudon","n_polska": "Jodła grecka","synantrop": "U","rodzina": "Pinaceae","rzad": "Pinales","nadrzad": "","podklasa": "","klasa": "Coniferopsida","podgromada": "Gymnospermae","gromada": "Spermatophyta"'''
 
+g_acenaMacrostemon_correctRecord = '''"nr_kol": 7,"rodz_id": 26,"rodzaj": "Acaena","nzw_gat": "macrostemon","gatunek": "Acaena macrostemon","autor_gat": "Hook. f.","n_lacinska": "Acaena macrostemon Hook. f.","synantrop": "E","rodzina": "Rosaceae","rzad": "Rosales","nadrzad": "Rosiflorae","podklasa": "Rosidae","klasa": "Dicotyledoneae","podgromada": "Angiospermae","gromada": "Spermatophyta"'''
+
+g_aconitumTauricum_correctRecord = '''"nr_kol": 43,"rodz_id": 511,"rodzaj": "Aconitum","nzw_gat": "tauricum","gatunek": "Aconitum tauricum","autor_gat": "Wulfen","podgatunek": "subsp. nanum","autor_pgat": "(Baumg.) Goly","n_lacinska": "Aconitum tauricum Wulfen subsp. nanum (Baumg.) Goly","n_polska": "Tojad tauryjski","chroniony": "s","rodzina": "Ranunculaceae","rzad": "Ranunculales","nadrzad": "","podklasa": "Polycarpicae","klasa": "Dicotyledoneae","podgromada": "Angiospermae","gromada": "Spermatophyta"'''
+
+g_ballotaNigraFoetida_correctRecord = '''"nr_kol": 458,"rodz_id": 53,"rodzaj": "Ballota","nzw_gat": "nigra","gatunek": "Ballota nigra","autor_gat": "L.","podgatunek": "subsp. foetida","autor_pgat": "Hayek","n_lacinska": "Ballota nigra L. subsp. foetida Hayek","n_polska": "Mierznica czarna cuchnąca","synantrop": "A","rodzina": "Lamiaceae","rzad": "Lamiales","nadrzad": "Tubiflorae","podklasa": "Asteridae","klasa": "Dicotyledoneae","podgromada": "Angiospermae","gromada": "Spermatophyta"'''
+
 class SingleRecordDataExtractorTestSuite(unittest.TestCase):
     def testIfSingleRecordDataExtractorIsCreatedProperly(self):
         m_sut = SingleRecordDataExtractor()
@@ -37,6 +43,11 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         l_result = m_sut.getSubspeciesAuthor(g_abiesCephalonica_correctRecord)
         assert l_result == "", "Actual value: " + l_result
 
+    def testIfExtractingValueOfAuthorSubspFieldWorksForFilledSubspCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getSubspeciesAuthor(g_aconitumTauricum_correctRecord)
+        assert l_result == "(Baumg.) Goly", "Actual value: " + l_result
+
     def testIfExtractingValueOfSynantropFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getSynantrop(g_abiesCephalonica_correctRecord)
@@ -47,10 +58,20 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         l_result = m_sut.getLatinSubspeciesName(g_abiesCephalonica_correctRecord)
         assert l_result == "", "Actual value: " + l_result
 
+    def testIfExtractingValueOfSubspeciesInLatinFieldWorksForFilledSubspeciesCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getLatinSubspeciesName(g_aconitumTauricum_correctRecord)
+        assert l_result == "nanum", "Actual value: " + l_result
+
     def testIfExtractingValueOfSubspeciesInPolishFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getPolishSubspeciesName(g_abiesCephalonica_correctRecord)
         assert l_result == "", "Actual value: " + l_result
+
+    def testIfExtractingValueOfSubspeciesInPolishFieldWorksForFilledSubspeciesCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishSubspeciesName(g_ballotaNigraFoetida_correctRecord)
+        assert l_result == "cuchnąca", "Actual value: " + l_result
 
     def testIfExtractingValueOfSpeciesInLatinFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
@@ -87,6 +108,11 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         l_result = m_sut.getLatinSuperorderName(g_abiesCephalonica_correctRecord)
         assert l_result == "", "Actual value: " + l_result
 
+    def testIfExtractingValueOfSuperorderInLatinFieldWorksForFilledSuperorderCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getLatinSuperorderName(g_acenaMacrostemon_correctRecord)
+        assert l_result == "Rosiflorae", "Actual value: " + l_result
+
     def testIfExtractingValueOfSubclassInLatinFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getLatinSubclassName(g_abiesCephalonica_correctRecord)
@@ -97,6 +123,11 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         l_result = m_sut.getLatinClassName(g_abiesCephalonica_correctRecord)
         assert l_result == "Coniferopsida", "Actual value: " + l_result
 
+    def testIfExtractingValueOfSubclassInLatinFieldWorksForFilledSubclassCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getLatinSubclassName(g_acenaMacrostemon_correctRecord)
+        assert l_result == "Rosidae", "Actual value: " + l_result
+
     def testIfExtractingValueOfSubdivisionInLatinFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getLatinSubdivisionName(g_abiesCephalonica_correctRecord)
@@ -106,6 +137,7 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getLatinDivisionName(g_abiesCephalonica_correctRecord)
         assert l_result == "Spermatophyta", "Actual value: " + l_result
+
 
 if __name__ == "__main__":
     unittest.main()
