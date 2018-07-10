@@ -46,6 +46,34 @@ class SingleRecordDataExtractor:
         l_polishFullName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "n_polska")
         return self.__getGenusName(l_polishFullName)
 
+    def getLatinFamilyName(self, p_speciesRecord):
+        l_latinFullName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "rodzina")
+        return self.__getGenusName(l_latinFullName)
+
+    def getLatinOrderName(self, p_speciesRecord):
+        l_latinFullName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "rzad")
+        return self.__getGenusName(l_latinFullName)
+
+    def getLatinSuperorderName(self, p_speciesRecord):
+        l_latinFullName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "nadrzad")
+        return self.__getGenusName(l_latinFullName)
+
+    def getLatinSubclassName(self, p_speciesRecord):
+        l_latinFullName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "podklasa")
+        return self.__getGenusName(l_latinFullName)
+
+    def getLatinClassName(self, p_speciesRecord):
+        l_latinFullName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "klasa")
+        return self.__getGenusName(l_latinFullName)
+
+    def getLatinSubdivisionName(self, p_speciesRecord):
+        l_latinFullName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "podgromada")
+        return self.__getGenusName(l_latinFullName)
+
+    def getLatinDivisionName(self, p_speciesRecord):
+        l_latinFullName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "gromada")
+        return self.__getGenusName(l_latinFullName)
+
     def __getValueOfGivenFieldFromSpeciesRecord(self, p_speciesRecord, p_fieldType):
         l_fieldsFromRecordAsList = self.__splitRecordByFields(p_speciesRecord)
         l_searchedField = self.__findFieldWithItsValueForGivenType(l_fieldsFromRecordAsList, p_fieldType)

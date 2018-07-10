@@ -72,5 +72,40 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         l_result = m_sut.getPolishGenusName(g_abiesCephalonica_correctRecord)
         assert l_result == "Jodła", "Actual value: " + l_result
 
+    def testIfExtractingValueOfFamilyInLatinFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getLatinFamilyName(g_abiesCephalonica_correctRecord)
+        assert l_result == "Pinaceae", "Actual value: " + l_result
+
+    def testIfExtractingValueOfOrderInLatinFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getLatinOrderName(g_abiesCephalonica_correctRecord)
+        assert l_result == "Pinales", "Actual value: " + l_result
+
+    def testIfExtractingValueOfSuperorderInLatinFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getLatinSuperorderName(g_abiesCephalonica_correctRecord)
+        assert l_result == "", "Actual value: " + l_result
+
+    def testIfExtractingValueOfSubclassInLatinFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getLatinSubclassName(g_abiesCephalonica_correctRecord)
+        assert l_result == "", "Actual value: " + l_result
+
+    def testIfExtractingValueOfClassInLatinFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getLatinClassName(g_abiesCephalonica_correctRecord)
+        assert l_result == "Coniferopsida", "Actual value: " + l_result
+
+    def testIfExtractingValueOfSubdivisionInLatinFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getLatinSubdivisionName(g_abiesCephalonica_correctRecord)
+        assert l_result == "Gymnospermae", "Actual value: " + l_result
+
+    def testIfExtractingValueOfDivisionInLatinFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getLatinDivisionName(g_abiesCephalonica_correctRecord)
+        assert l_result == "Spermatophyta", "Actual value: " + l_result
+
 if __name__ == "__main__":
     unittest.main()
