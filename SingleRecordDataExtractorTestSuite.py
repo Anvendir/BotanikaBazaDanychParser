@@ -14,29 +14,45 @@ g_aconitumTauricum_correctRecord = '''"nr_kol": 43,"rodz_id": 511,"rodzaj": "Aco
 
 g_ballotaNigraFoetida_correctRecord = '''"nr_kol": 458,"rodz_id": 53,"rodzaj": "Ballota","nzw_gat": "nigra","gatunek": "Ballota nigra","autor_gat": "L.","podgatunek": "subsp. foetida","autor_pgat": "Hayek","n_lacinska": "Ballota nigra L. subsp. foetida Hayek","n_polska": "Mierznica czarna cuchnąca","synantrop": "A","rodzina": "Lamiaceae","rzad": "Lamiales","nadrzad": "Tubiflorae","podklasa": "Asteridae","klasa": "Dicotyledoneae","podgromada": "Angiospermae","gromada": "Spermatophyta"'''
 
+g_begniaHortensis_correctRecord = '''"nr_kol": 478,"rodz_id": 542,"rodzaj": "Begonia","nzw_gat": "x hortensis","gatunek": "Begonia x hortensis","autor_gat": "Graf & Zwicky","n_lacinska": "Begonia x hortensis Graf & Zwicky","n_polska": "Begonia (Ukośnica) stale kwitnąca","synantrop": "U","rodzina": "Begoniaceae","rzad": "Begoniales","nadrzad": "Cistiflorae","podklasa": "Dilleniidae","klasa": "Dicotyledoneae","podgromada": "Angiospermae","gromada": "Spermatophyta"'''
+
 class SingleRecordDataExtractorTestSuite(unittest.TestCase):
     def testIfSingleRecordDataExtractorIsCreatedProperly(self):
         m_sut = SingleRecordDataExtractor()
    
+
     def testIfExtractingValueOfLatinNameFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getLatinName(g_abiesCephalonica_correctRecord)
         assert l_result == "Abies cephalonica", "Actual value: " + l_result
+
+    def testIfExtractingValueOfLatinNameFieldWorksForHybridWithXCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getLatinName(g_begniaHortensis_correctRecord)
+        assert l_result == "Begonia x hortensis", "Actual value: " + l_result
 
     def testIfExtractingValueOfPolishNameFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getPolishName(g_abiesCephalonica_correctRecord)
         assert l_result == "Jodła grecka", "Actual value: " + l_result
 
+    def testIfExtractingValueOfPolishNameFieldWorksForCaseWhereThereIsBracketCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishName(g_begniaHortensis_correctRecord)
+        assert l_result == "Begonia stale kwitnąca", "Actual value: " + l_result
+
+
     def testIfExtractingValueOfLatinNamePlusAuthorFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getLatinNameWithAuthor(g_abiesCephalonica_correctRecord)
         assert l_result == "Abies cephalonica Loudon", "Actual value: " + l_result
 
+
     def testIfExtractingValueOfAuthorFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getSpeciesAuthor(g_abiesCephalonica_correctRecord)
         assert l_result == "Loudon", "Actual value: " + l_result
+
 
     def testIfExtractingValueOfAuthorSubspFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
@@ -48,10 +64,12 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         l_result = m_sut.getSubspeciesAuthor(g_aconitumTauricum_correctRecord)
         assert l_result == "(Baumg.) Goly", "Actual value: " + l_result
 
+
     def testIfExtractingValueOfSynantropFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getSynantrop(g_abiesCephalonica_correctRecord)
         assert l_result == "U", "Actual value: " + l_result
+
 
     def testIfExtractingValueOfSubspeciesInLatinFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
@@ -73,15 +91,27 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         l_result = m_sut.getPolishSubspeciesName(g_ballotaNigraFoetida_correctRecord)
         assert l_result == "cuchnąca", "Actual value: " + l_result
 
+    def testIfExtractingValueOfSubspeciesInPolishFieldWorksForTwoWordSpeciesNameAndNoSubspeciesCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishSubspeciesName(g_begniaHortensis_correctRecord)
+        assert l_result == "", "Actual value: " + l_result
+
+
     def testIfExtractingValueOfSpeciesInLatinFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getLatinSpeciesName(g_abiesCephalonica_correctRecord)
         assert l_result == "cephalonica", "Actual value: " + l_result
 
+    def testIfExtractingValueOfSpeciesInLatinFieldWorksForHybridWithXCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getLatinSpeciesName(g_begniaHortensis_correctRecord)
+        assert l_result == "x hortensis", "Actual value: " + l_result
+
     def testIfExtractingValueOfSpeciesInPolishFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getPolishSpeciesName(g_abiesCephalonica_correctRecord)
         assert l_result == "grecka", "Actual value: " + l_result
+
 
     def testIfExtractingValueOfGenusInLatinFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
@@ -93,15 +123,18 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         l_result = m_sut.getPolishGenusName(g_abiesCephalonica_correctRecord)
         assert l_result == "Jodła", "Actual value: " + l_result
 
+
     def testIfExtractingValueOfFamilyInLatinFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getLatinFamilyName(g_abiesCephalonica_correctRecord)
         assert l_result == "Pinaceae", "Actual value: " + l_result
 
+
     def testIfExtractingValueOfOrderInLatinFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getLatinOrderName(g_abiesCephalonica_correctRecord)
         assert l_result == "Pinales", "Actual value: " + l_result
+
 
     def testIfExtractingValueOfSuperorderInLatinFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
@@ -113,31 +146,34 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         l_result = m_sut.getLatinSuperorderName(g_acenaMacrostemon_correctRecord)
         assert l_result == "Rosiflorae", "Actual value: " + l_result
 
+
     def testIfExtractingValueOfSubclassInLatinFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getLatinSubclassName(g_abiesCephalonica_correctRecord)
         assert l_result == "", "Actual value: " + l_result
-
-    def testIfExtractingValueOfClassInLatinFieldWorksForSimpleCase(self):
-        m_sut = SingleRecordDataExtractor()
-        l_result = m_sut.getLatinClassName(g_abiesCephalonica_correctRecord)
-        assert l_result == "Coniferopsida", "Actual value: " + l_result
 
     def testIfExtractingValueOfSubclassInLatinFieldWorksForFilledSubclassCase(self):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getLatinSubclassName(g_acenaMacrostemon_correctRecord)
         assert l_result == "Rosidae", "Actual value: " + l_result
 
+
+    def testIfExtractingValueOfClassInLatinFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getLatinClassName(g_abiesCephalonica_correctRecord)
+        assert l_result == "Coniferopsida", "Actual value: " + l_result
+
+
     def testIfExtractingValueOfSubdivisionInLatinFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getLatinSubdivisionName(g_abiesCephalonica_correctRecord)
         assert l_result == "Gymnospermae", "Actual value: " + l_result
 
+
     def testIfExtractingValueOfDivisionInLatinFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getLatinDivisionName(g_abiesCephalonica_correctRecord)
         assert l_result == "Spermatophyta", "Actual value: " + l_result
-
 
 if __name__ == "__main__":
     unittest.main()

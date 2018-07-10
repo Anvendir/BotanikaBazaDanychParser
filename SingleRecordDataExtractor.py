@@ -8,7 +8,8 @@ class SingleRecordDataExtractor:
         return self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "gatunek")
 
     def getPolishName(self, p_speciesRecord):
-        return self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "n_polska")
+        l_rawPolishName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "n_polska")
+        return self.__removeAdditionalNameInBracketsIfNeeded(l_rawPolishName)
 
     def getLatinNameWithAuthor(self, p_speciesRecord):
         return self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "n_lacinska")
@@ -27,12 +28,14 @@ class SingleRecordDataExtractor:
         return re.sub("subsp. ", "", l_latinSubspieciesNameWithPrefix)
 
     def getPolishSubspeciesName(self, p_speciesRecord):
+        if "" == self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "podgatunek"):
+            return ""
+
         l_polishFullName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "n_polska")
         return self.__getSubspeciesName(l_polishFullName)
    
     def getLatinSpeciesName(self, p_speciesRecord):
-        l_latinFullName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "gatunek")
-        return self.__getSpeciesName(l_latinFullName)
+        return self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "nzw_gat")
 
     def getPolishSpeciesName(self, p_speciesRecord):
         l_polishFullName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "n_polska")
@@ -122,4 +125,8 @@ class SingleRecordDataExtractor:
             return l_nameAsListFirstElementGenusSecondSpecies[0]
         else:
             return ""
+
+    def __removeAdditionalNameInBracketsIfNeeded(self, p_rawPolishName):
+        return re.sub("\(.*\) ", "", p_rawPolishName)
+
 
