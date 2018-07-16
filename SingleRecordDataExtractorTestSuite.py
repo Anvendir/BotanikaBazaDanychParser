@@ -16,6 +16,16 @@ g_ballotaNigraFoetida_correctRecord = '''"nr_kol": 458,"rodz_id": 53,"rodzaj": "
 
 g_begniaHortensis_correctRecord = '''"nr_kol": 478,"rodz_id": 542,"rodzaj": "Begonia","nzw_gat": "x hortensis","gatunek": "Begonia x hortensis","autor_gat": "Graf & Zwicky","n_lacinska": "Begonia x hortensis Graf & Zwicky","n_polska": "Begonia (Ukośnica) stale kwitnąca","synantrop": "U","rodzina": "Begoniaceae","rzad": "Begoniales","nadrzad": "Cistiflorae","podklasa": "Dilleniidae","klasa": "Dicotyledoneae","podgromada": "Angiospermae","gromada": "Spermatophyta"'''
 
+g_ageratumHoustonianum_correctRecord = '''"nr_kol": 68,"rodz_id": 718,"rodzaj": "Ageratum","nzw_gat": "houstonianum","gatunek": "Ageratum houstonianum","autor_gat": "Mill.","n_lacinska": "Ageratum houstonianum Mill.","n_polska": "Żeniszek (Ageratum) meksykański","synantrop": "U","rodzina": "Asteraceae","rzad": "Asterales","nadrzad": "Campanulatae","podklasa": "Asteridae","klasa": "Dicotyledoneae","podgromada": "Angiospermae","gromada": "Spermatophyta"'''
+
+g_ageratumHoustonianum_withModifiedSubspeciesRecord = '''"nr_kol": 68,"rodz_id": 718,"rodzaj": "Ageratum","nzw_gat": "houstonianum","gatunek": "Ageratum houstonianum","autor_gat": "Mill.","podgatunek": "subsp. houstonianum","n_lacinska": "Ageratum houstonianum Mill.","n_polska": "Żeniszek (Ageratum) meksykański typowy","synantrop": "U","rodzina": "Asteraceae","rzad": "Asterales","nadrzad": "Campanulatae","podklasa": "Asteridae","klasa": "Dicotyledoneae","podgromada": "Angiospermae","gromada": "Spermatophyta"'''
+
+g_ageratumHoustonianum_withModifiedGenusRecord = '''"nr_kol": 68,"rodz_id": 718,"rodzaj": "Ageratum","nzw_gat": "houstonianum","gatunek": "Ageratum houstonianum","autor_gat": "Mill.","podgatunek": "subsp. houstonianum","n_lacinska": "Ageratum houstonianum Mill.","n_polska": "(Ageratum) Żeniszek meksykański typowy","synantrop": "U","rodzina": "Asteraceae","rzad": "Asterales","nadrzad": "Campanulatae","podklasa": "Asteridae","klasa": "Dicotyledoneae","podgromada": "Angiospermae","gromada": "Spermatophyta"'''
+
+g_abiesConcolor_correctRecord = '''"nr_kol": 3,"rodz_id": 607,"rodzaj": "Abies","nzw_gat": "concolor","gatunek": "Abies concolor","autor_gat": "(Gordon) Lindl. ex Hildebr.","n_lacinska": "Abies concolor (Gordon) Lindl. ex Hildebr.","n_polska": "Jodła jednobarwna (J. kalifornijska)","synantrop": "U","rodzina": "Pinaceae","rzad": "Pinales","nadrzad": "","podklasa": "","klasa": "Coniferopsida","podgromada": "Gymnospermae","gromada": "Spermatophyta"'''
+
+g_ammobiumAlatum_correctRecord = '''"nr_kol": 239,"rodz_id": 279,"rodzaj": "Ammobium","nzw_gat": "alatum","gatunek": "Ammobium alatum","autor_gat": "R. Br.","n_lacinska": "Ammobium alatum R. Br.","n_polska": "Wiekuistka rozgałęziona (Złociszek oskrzydlony,Susz)","synantrop": "U","rodzina": "Asteraceae","rzad": "Asterales","nadrzad": "Campanulatae","podklasa": "Asteridae","klasa": "Dicotyledoneae","podgromada": "Angiospermae","gromada": "Spermatophyta"'''
+
 class SingleRecordDataExtractorTestSuite(unittest.TestCase):
     def testIfSingleRecordDataExtractorIsCreatedProperly(self):
         m_sut = SingleRecordDataExtractor()
@@ -40,6 +50,16 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getPolishName(g_begniaHortensis_correctRecord)
         assert l_result == "Begonia stale kwitnąca", "Actual value: " + l_result
+
+    def testIfExtractingValueOfPolishNameFieldWorksForCaseWhereThereIsBracketAdditionalCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishName(g_abiesConcolor_correctRecord)
+        assert l_result == "Jodła jednobarwna", "Actual value: " + l_result
+
+    '''def testIfExtractingValueOfPolishNameFieldWorksForCaseWhereThereIsBracketOneMoreCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishName(g_ammobiumAlatum_correctRecord)
+        assert l_result == "Wiekuistka rozgałęziona", "Actual value: " + l_result'''
 
 
     def testIfExtractingValueOfLatinNamePlusAuthorFieldWorksForSimpleCase(self):
@@ -96,6 +116,11 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         l_result = m_sut.getPolishSubspeciesName(g_begniaHortensis_correctRecord)
         assert l_result == "", "Actual value: " + l_result
 
+    def testIfExtractingValueOfSubspeciesInPolishFieldWorksForBracketCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishSubspeciesName(g_ageratumHoustonianum_withModifiedSubspeciesRecord)
+        assert l_result == "typowy", "Actual value: " + l_result
+
 
     def testIfExtractingValueOfSpeciesInLatinFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
@@ -112,6 +137,11 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         l_result = m_sut.getPolishSpeciesName(g_abiesCephalonica_correctRecord)
         assert l_result == "grecka", "Actual value: " + l_result
 
+    def testIfExtractingValueOfSpeciesInPolishFieldWorksForBracketCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishSpeciesName(g_ageratumHoustonianum_correctRecord)
+        assert l_result == "meksykański", "Actual value: " + l_result
+
 
     def testIfExtractingValueOfGenusInLatinFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
@@ -122,6 +152,11 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getPolishGenusName(g_abiesCephalonica_correctRecord)
         assert l_result == "Jodła", "Actual value: " + l_result
+
+    def testIfExtractingValueOfGenusInPolishFieldWorksForBracketCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishGenusName(g_ageratumHoustonianum_withModifiedGenusRecord)
+        assert l_result == "Żeniszek", "Actual value: " + l_result
 
 
     def testIfExtractingValueOfFamilyInLatinFieldWorksForSimpleCase(self):

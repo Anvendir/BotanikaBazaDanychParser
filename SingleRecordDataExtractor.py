@@ -31,14 +31,14 @@ class SingleRecordDataExtractor:
         if "" == self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "podgatunek"):
             return ""
 
-        l_polishFullName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "n_polska")
+        l_polishFullName = self.getPolishName(p_speciesRecord)
         return self.__getSubspeciesName(l_polishFullName)
    
     def getLatinSpeciesName(self, p_speciesRecord):
         return self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "nzw_gat")
 
     def getPolishSpeciesName(self, p_speciesRecord):
-        l_polishFullName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "n_polska")
+        l_polishFullName = self.getPolishName(p_speciesRecord)
         return self.__getSpeciesName(l_polishFullName)
 
     def getLatinGenusName(self, p_speciesRecord):
@@ -46,7 +46,7 @@ class SingleRecordDataExtractor:
         return self.__getGenusName(l_latinFullName)
 
     def getPolishGenusName(self, p_speciesRecord):
-        l_polishFullName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "n_polska")
+        l_polishFullName = self.getPolishName(p_speciesRecord)
         return self.__getGenusName(l_polishFullName)
 
     def getLatinFamilyName(self, p_speciesRecord):
@@ -127,6 +127,7 @@ class SingleRecordDataExtractor:
             return ""
 
     def __removeAdditionalNameInBracketsIfNeeded(self, p_rawPolishName):
-        return re.sub("\(.*\) ", "", p_rawPolishName)
+        l_temp = re.sub("\(.*\)\ ", "", p_rawPolishName)
+        return re.sub("\ \(.*\)", "", l_temp)
 
 
