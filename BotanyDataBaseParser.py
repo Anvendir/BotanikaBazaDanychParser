@@ -5,6 +5,7 @@ import re
 import os
 from InsertCommandBuilder import InsertCommandBuilder
 from RawDataBaseFormater import RawDataBaseFormater
+from ExcelDataBaseBuilder import ExcelDataBaseBuilder
 
 def readDataBase():
     l_fileHandler = open("bazaCalosc.txt", "r")
@@ -68,5 +69,7 @@ saveIndirectOutputToFile(l_formatedSpeciesList, l_outputDirName)
 
 InsertCommandBuilder().prepareInsertCommandsForSpeciesList(l_formatedSpeciesList, l_outputDirName)
 divideInsertCommandFileBy1000Records(l_outputDirName)
+
+ExcelDataBaseBuilder().buildDataBase(l_formatedSpeciesList, l_outputDirName)
 
 print "\033[92m" + "Program finished successfully!" + "\033[0m"
