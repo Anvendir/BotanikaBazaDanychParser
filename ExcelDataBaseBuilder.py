@@ -68,12 +68,12 @@ class ExcelDataBaseBuilder:
 
         l_systemathicHierarchy = self.__prepareSystematicHierarchy(p_speciesRecord)
 
-        l_valuesFromAllFields = l_latinName + "; " + \
-                                l_polishName + "; " + \
-                                l_latinNamePlusAuthor + "; " + \
-                                l_author + "; " + \
-                                l_authorSubsp + "; " + \
-                                l_synantrop + "; " + \
+        l_valuesFromAllFields = l_latinName + ";" + \
+                                l_polishName + ";" + \
+                                l_latinNamePlusAuthor + ";" + \
+                                l_author + ";" + \
+                                l_authorSubsp + ";" + \
+                                l_synantrop + ";" + \
                                 l_systemathicHierarchy
 
         return l_valuesFromAllFields 
@@ -104,27 +104,27 @@ class ExcelDataBaseBuilder:
         l_realm = ""
         l_realmPolish = ""
 
-        l_systemathicHierarchy = l_subSpeciesLatin + "; " + \
-                                 l_subSpeciesPolish + "; " + \
-                                 l_speciesLatin + "; " + \
-                                 l_speciesPolish + "; " + \
-                                 l_genusLatin + "; " + \
-                                 l_genusPolish + "; " + \
-                                 l_family + "; " + \
-                                 l_familyPolish + "; " + \
-                                 l_order + "; " + \
-                                 l_orderPolish + "; " + \
-                                 l_superorder + "; " + \
-                                 l_superorderPolish + "; " + \
-                                 l_subclass + "; " + \
-                                 l_subclassPolish + "; " + \
-                                 l_class_ + "; " + \
-                                 l_classPolish + "; " + \
-                                 l_subdivision + "; " + \
-                                 l_subdivisionPolish + "; " + \
-                                 l_division + "; " + \
-                                 l_divisionPolish + "; " + \
-                                 l_realm + "; " + \
+        l_systemathicHierarchy = l_subSpeciesLatin + ";" + \
+                                 l_subSpeciesPolish + ";" + \
+                                 l_speciesLatin + ";" + \
+                                 l_speciesPolish + ";" + \
+                                 l_genusLatin + ";" + \
+                                 l_genusPolish + ";" + \
+                                 l_family + ";" + \
+                                 l_familyPolish + ";" + \
+                                 l_order + ";" + \
+                                 l_orderPolish + ";" + \
+                                 l_superorder + ";" + \
+                                 l_superorderPolish + ";" + \
+                                 l_subclass + ";" + \
+                                 l_subclassPolish + ";" + \
+                                 l_class_ + ";" + \
+                                 l_classPolish + ";" + \
+                                 l_subdivision + ";" + \
+                                 l_subdivisionPolish + ";" + \
+                                 l_division + ";" + \
+                                 l_divisionPolish + ";" + \
+                                 l_realm + ";" + \
                                  l_realmPolish
 
         return l_systemathicHierarchy 
