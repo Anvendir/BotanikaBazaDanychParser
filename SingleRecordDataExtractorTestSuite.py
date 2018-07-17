@@ -26,6 +26,8 @@ g_abiesConcolor_correctRecord = '''"nr_kol": 3,"rodz_id": 607,"rodzaj": "Abies",
 
 g_ammobiumAlatum_correctRecord = '''"nr_kol": 239,"rodz_id": 279,"rodzaj": "Ammobium","nzw_gat": "alatum","gatunek": "Ammobium alatum","autor_gat": "R. Br.","n_lacinska": "Ammobium alatum R. Br.","n_polska": "Wiekuistka rozgałęziona (Złociszek oskrzydlony,Susz)","synantrop": "U","rodzina": "Asteraceae","rzad": "Asterales","nadrzad": "Campanulatae","podklasa": "Asteridae","klasa": "Dicotyledoneae","podgromada": "Angiospermae","gromada": "Spermatophyta"'''
 
+g_arabisGlabra_correctRecord = '''"nr_kol": 319,"rodz_id": 765,"rodzaj": "Arabis","nzw_gat": "glabra","gatunek": "Arabis glabra","autor_gat": "(L.) Bernh.","n_lacinska": "Arabis glabra (L.) Bernh.","n_polska": "Gęsiówka wieżyczkowata (Wieżyczka (Wieżycznik) gładka)","rodzina": "Brassicaceae","rzad": "Capparales","nadrzad": "Cistiflorae","podklasa": "Dilleniidae","klasa": "Dicotyledoneae","podgromada": "Angiospermae","gromada": "Spermatophyta"'''
+
 class SingleRecordDataExtractorTestSuite(unittest.TestCase):
     def testIfSingleRecordDataExtractorIsCreatedProperly(self):
         m_sut = SingleRecordDataExtractor()
@@ -56,10 +58,15 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         l_result = m_sut.getPolishName(g_abiesConcolor_correctRecord)
         assert l_result == "Jodła jednobarwna", "Actual value: " + l_result
 
-    '''def testIfExtractingValueOfPolishNameFieldWorksForCaseWhereThereIsBracketOneMoreCase(self):
+    def testIfExtractingValueOfPolishNameFieldWorksForCaseWhereThereIsBracketOneMoreCase(self):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getPolishName(g_ammobiumAlatum_correctRecord)
-        assert l_result == "Wiekuistka rozgałęziona", "Actual value: " + l_result'''
+        assert l_result == "Wiekuistka rozgałęziona", "Actual value: " + l_result
+
+    def testIfExtractingValueOfPolishNameFieldWorksForCaseWhereThereIsDoubleBracketCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishName(g_arabisGlabra_correctRecord)
+        assert l_result == "Gęsiówka wieżyczkowata", "Actual value: " + l_result
 
 
     def testIfExtractingValueOfLatinNamePlusAuthorFieldWorksForSimpleCase(self):

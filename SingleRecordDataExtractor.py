@@ -83,8 +83,18 @@ class SingleRecordDataExtractor:
 
         return self.__getValueFromParFieldTypeAndValue(p_fieldType, l_searchedField)
 
+    def __replFunctionForRemoveNotSeparatorCommas(self, p_matchObject):
+        if p_matchObject.group(0) == ',\"':
+            return ',\"'
+        else:
+            return ' '
+
+    def __changeCommaWhichAreNotFieldsSeparatorsWithSpace(self, p_speciesRecord):
+        return re.sub(',.', self.__replFunctionForRemoveNotSeparatorCommas, p_speciesRecord)
+
     def __splitRecordByFields(self, p_speciesRecord):
-        return re.split(',', p_speciesRecord) 
+        l_preprocessedSpeciesRecord = self.__changeCommaWhichAreNotFieldsSeparatorsWithSpace(p_speciesRecord)
+        return re.split(',', l_preprocessedSpeciesRecord) 
 
     def __findFieldWithItsValueForGivenType(self, p_fieldsFromRecordAsList, p_fieldType):
         l_searchedField = ""
@@ -127,7 +137,16 @@ class SingleRecordDataExtractor:
             return ""
 
     def __removeAdditionalNameInBracketsIfNeeded(self, p_rawPolishName):
-        l_temp = re.sub("\(.*\)\ ", "", p_rawPolishName)
-        return re.sub("\ \(.*\)", "", l_temp)
+        l_doubleBacketWithSpaceBeforeRegex = r' \(.*\(.*\).*\)'
+        l_preprocessed = re.sub(l_doubleBacketWithSpaceBeforeRegex, "", p_rawPolishName)
 
+        l_doubleBacketWithSpaceAfterRegex = r'\(.*\(.*\).*\) '
+        l_preprocessed = re.sub(l_doubleBacketWithSpaceAfterRegex, "", l_preprocessed)
 
+        l_bracketsWithSpaceAfterRegex = r'\(.*\) '
+        l_preprocessed = re.sub(l_bracketsWithSpaceAfterRegex, "", l_preprocessed)
+
+        l_bracketWithSpaceBeforeRegex = r' \(.*\)'
+        return re.sub(l_bracketWithSpaceBeforeRegex, "", l_preprocessed)
+
+    
