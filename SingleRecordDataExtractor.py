@@ -129,6 +129,18 @@ class SingleRecordDataExtractor:
 
         return ""
 
+    def getLatinRealmName(self, p_speciesRecord):
+        l_polishDataBase = self.__readPolishDataBase()
+        l_listWhereSingleLineIsSingleListElement = self.__getFileAsListSingleLineAsSingleListElement(l_polishDataBase) 
+        l_lineSplitedByRecords = re.split("\t", l_listWhereSingleLineIsSingleListElement[1])
+        return self.__getLatinRealmNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords)
+
+    def getPolishRealmName(self, p_speciesRecord):
+        l_polishDataBase = self.__readPolishDataBase()
+        l_listWhereSingleLineIsSingleListElement = self.__getFileAsListSingleLineAsSingleListElement(l_polishDataBase) 
+        l_lineSplitedByRecords = re.split("\t", l_listWhereSingleLineIsSingleListElement[1])
+        return self.__getPolishRealmNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords)
+
     def __getLatinFamilyNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
         return p_polishDataBaseLineSplitedByRecords[1]
 
@@ -152,6 +164,13 @@ class SingleRecordDataExtractor:
 
     def __getPolishDivisionNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
         return p_polishDataBaseLineSplitedByRecords[12]
+
+    def __getLatinRealmNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
+        l_result = re.sub("\s", "", p_polishDataBaseLineSplitedByRecords[15])
+        return l_result
+
+    def __getPolishRealmNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
+        return p_polishDataBaseLineSplitedByRecords[14]
 
     def __getFileAsListSingleLineAsSingleListElement(self, p_polishNameDataBase):
         return re.split("\n", p_polishNameDataBase) 

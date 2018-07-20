@@ -242,5 +242,16 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         l_result = m_sut.getPolishDivisionName(g_abiesCephalonica_correctRecord)
         assert l_result == "Rośliny nasienne", "Actual value: " + l_result
 
+
+    def testIfExtractingValueOfRealmInLatinFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getLatinRealmName(g_abiesCephalonica_correctRecord)
+        assert l_result == "Plantae", "Actual value: " + l_result
+
+    def testIfExtractingValueOfRealmInPolishFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishRealmName(g_abiesCephalonica_correctRecord)
+        assert l_result == "Rośliny", "Actual value: " + l_result
+
 if __name__ == "__main__":
     unittest.main()
