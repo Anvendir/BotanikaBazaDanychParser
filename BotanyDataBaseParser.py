@@ -7,13 +7,14 @@ from InsertCommandBuilder import InsertCommandBuilder
 from RawDataBaseFormater import RawDataBaseFormater
 from ExcelDataBaseBuilder import ExcelDataBaseBuilder
 from InsertCommandFileDivider import InsertCommandFileDivider
+from PolishDataBaseSuplementer import PolishDataBaseSuplementer
 
 def readDataBase():
     l_fileHandler = open("bazaCalosc.txt", "r")
-    dataBaseAsString = l_fileHandler.read()
+    l_dataBaseAsString = l_fileHandler.read()
     l_fileHandler.close()
     print "Raw list reading succeeded."
-    return dataBaseAsString 
+    return l_dataBaseAsString 
 
 def createOutputDirIfNeeded(p_outputDirName):
     if not os.path.exists(p_outputDirName):
@@ -30,7 +31,6 @@ def saveIndirectOutputToFile(p_speciesList, p_outputDirName):
     l_indirectOutputFile.close()
     print "File " + l_outputFileName + " saved." 
 
-
 #main program section
 print "\033[94m" + "Program started." + "\033[0m"
 
@@ -40,7 +40,9 @@ createOutputDirIfNeeded(l_outputDirName)
 l_dataBase = readDataBase()
 l_formatedSpeciesList = RawDataBaseFormater().formatRawDataBase(l_dataBase)
 saveIndirectOutputToFile(l_formatedSpeciesList, l_outputDirName)
-#addPolishNameToFamilyAndUpperTaxons(l_formatedSpeciesList, l_outputDirName)
+
+l_suplementer = PolishDataBaseSuplementer()
+l_suplementer.addPolishNameToFamilyAndUpperTaxons(l_formatedSpeciesList, l_outputDirName)
 
 l_insertCommandBuilder = InsertCommandBuilder() 
 l_outputFileName = l_insertCommandBuilder.buildInsertCommandsForSpeciesList(l_formatedSpeciesList, l_outputDirName)
