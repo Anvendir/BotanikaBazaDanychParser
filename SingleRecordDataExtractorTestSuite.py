@@ -171,11 +171,26 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         l_result = m_sut.getLatinFamilyName(g_abiesCephalonica_correctRecord)
         assert l_result == "Pinaceae", "Actual value: " + l_result
 
+    def testIfExtractingValueOfFamilyInPolishFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishFamilyName(g_abiesCephalonica_correctRecord)
+        assert l_result == "Sosnowate", "Actual value: " + l_result
+    
+    def testIfExtractingValueOfFamilyInPolishFieldWorksForSecondSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishFamilyName(g_acenaMacrostemon_correctRecord)
+        assert l_result == "Różowate", "Actual value: " + l_result
+
 
     def testIfExtractingValueOfOrderInLatinFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getLatinOrderName(g_abiesCephalonica_correctRecord)
         assert l_result == "Pinales", "Actual value: " + l_result
+
+    def testIfExtractingValueOfOrderInPolishFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishOrderName(g_abiesCephalonica_correctRecord)
+        assert l_result == "Sosnowce", "Actual value: " + l_result
 
 
     def testIfExtractingValueOfSuperorderInLatinFieldWorksForSimpleCase(self):
@@ -205,6 +220,11 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         l_result = m_sut.getLatinClassName(g_abiesCephalonica_correctRecord)
         assert l_result == "Coniferopsida", "Actual value: " + l_result
 
+    def testIfExtractingValueOfClassInPolishFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishClassName(g_abiesCephalonica_correctRecord)
+        assert l_result == "Szpilkowe", "Actual value: " + l_result
+
 
     def testIfExtractingValueOfSubdivisionInLatinFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
@@ -216,6 +236,11 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getLatinDivisionName(g_abiesCephalonica_correctRecord)
         assert l_result == "Spermatophyta", "Actual value: " + l_result
+
+    def testIfExtractingValueOfDivisionInPolishFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishDivisionName(g_abiesCephalonica_correctRecord)
+        assert l_result == "Rośliny nasienne", "Actual value: " + l_result
 
 if __name__ == "__main__":
     unittest.main()

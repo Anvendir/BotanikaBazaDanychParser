@@ -7,7 +7,6 @@ from InsertCommandBuilder import InsertCommandBuilder
 from RawDataBaseFormater import RawDataBaseFormater
 from ExcelDataBaseBuilder import ExcelDataBaseBuilder
 from InsertCommandFileDivider import InsertCommandFileDivider
-from PolishDataBaseSuplementer import PolishDataBaseSuplementer
 
 def readDataBase():
     l_fileHandler = open("bazaCalosc.txt", "r")
@@ -40,9 +39,6 @@ createOutputDirIfNeeded(l_outputDirName)
 l_dataBase = readDataBase()
 l_formatedSpeciesList = RawDataBaseFormater().formatRawDataBase(l_dataBase)
 saveIndirectOutputToFile(l_formatedSpeciesList, l_outputDirName)
-
-l_suplementer = PolishDataBaseSuplementer()
-l_suplementer.addPolishNameToFamilyAndUpperTaxons(l_formatedSpeciesList, l_outputDirName)
 
 l_insertCommandBuilder = InsertCommandBuilder() 
 l_outputFileName = l_insertCommandBuilder.buildInsertCommandsForSpeciesList(l_formatedSpeciesList, l_outputDirName)
