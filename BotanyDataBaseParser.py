@@ -6,6 +6,7 @@ import os
 from InsertCommandBuilder import InsertCommandBuilder
 from RawDataBaseFormater import RawDataBaseFormater
 from ExcelDataBaseBuilder import ExcelDataBaseBuilder
+from InsertCommandFileDivider import InsertCommandFileDivider
 
 def readDataBase():
     l_fileHandler = open("bazaCalosc.txt", "r")
@@ -29,33 +30,6 @@ def saveIndirectOutputToFile(p_speciesList, p_outputDirName):
     l_indirectOutputFile.close()
     print "File " + l_outputFileName + " saved." 
 
-def readInsertCommandsForAllSpecies(p_outputDirName):
-    l_fileHandler = open(p_outputDirName + "/insertCommandsForAllSpeciesList.txt", "r")
-    l_rawFileContent = l_fileHandler.read()
-    l_fileHandler.close()
-    return re.split('\n', l_rawFileContent)
-
-def divideInsertCommandFileBy1000Records(p_outputDirName):
-    l_allInsertCommands = readInsertCommandsForAllSpecies(p_outputDirName)
-
-    l_outPutFileNamePrefix = p_outputDirName + "/insertCommandsFor_" 
-    l_outputFileName = l_outPutFileNamePrefix + str(0) + "_" + str(1000) + ".txt" 
-    l_outputFile = open(l_outputFileName, "w")
-
-    for l_iterator in range(len(l_allInsertCommands)):
-        if not (l_iterator % 1000) and l_iterator:
-            l_outputFile.close();
-            print "File " + l_outputFileName + " saved."
-
-            l_outputFileName = l_outPutFileNamePrefix + str(l_iterator) + "_" + str(l_iterator + 1000) + ".txt" 
-            l_outputFile = open(l_outputFileName, "w")
-
-        l_outputFile.write(l_allInsertCommands[l_iterator])
-        l_outputFile.write("\n")
-
-        if l_iterator == len(l_allInsertCommands) - 1:
-            l_outputFile.close();
-            print "File " + l_outputFileName + " saved."
 
 #main program section
 print "\033[94m" + "Program started." + "\033[0m"
@@ -66,9 +40,13 @@ createOutputDirIfNeeded(l_outputDirName)
 l_dataBase = readDataBase()
 l_formatedSpeciesList = RawDataBaseFormater().formatRawDataBase(l_dataBase)
 saveIndirectOutputToFile(l_formatedSpeciesList, l_outputDirName)
+#addPolishNameToFamilyAndUpperTaxons(l_formatedSpeciesList, l_outputDirName)
 
-InsertCommandBuilder().prepareInsertCommandsForSpeciesList(l_formatedSpeciesList, l_outputDirName)
-divideInsertCommandFileBy1000Records(l_outputDirName)
+l_insertCommandBuilder = InsertCommandBuilder() 
+l_outputFileName = l_insertCommandBuilder.buildInsertCommandsForSpeciesList(l_formatedSpeciesList, l_outputDirName)
+
+l_insertCommandDivider = InsertCommandFileDivider()
+l_insertCommandDivider.divideInsertCommandFileBy1000Records(l_outputFileName, l_outputDirName)
 
 ExcelDataBaseBuilder().buildDataBase(l_formatedSpeciesList, l_outputDirName)
 

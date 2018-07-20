@@ -5,9 +5,17 @@ import re
 from SingleRecordDataExtractor import SingleRecordDataExtractor
 
 class InsertCommandBuilder:
-    def prepareInsertCommandsForSpeciesList(self, p_formatedSpeciesList, p_outputDirName):
-        l_outputFileName = p_outputDirName + "/insertCommandsForAllSpeciesList.txt" 
-        l_outputFile = open(l_outputFileName, "w")
+    def buildInsertCommandsForSpeciesList(self, p_formatedSpeciesList, p_outputDirName):
+        l_outputFileName = "insertCommandsForAllSpeciesList.txt"
+        l_outputFilePath = p_outputDirName + "/" + l_outputFileName 
+
+        self.__saveInsertCommandsToOutputFile(l_outputFilePath, p_formatedSpeciesList)
+        print "File " + l_outputFilePath + " saved."
+        
+        return l_outputFileName 
+
+    def __saveInsertCommandsToOutputFile(self, p_outputFilePath, p_formatedSpeciesList):
+        l_outputFile = open(p_outputFilePath, "w")
 
         for l_speciesRecord in p_formatedSpeciesList:
             l_singleCommand = self.__prepareInsertCommandForSingleSpeciesRecord(l_speciesRecord)
@@ -16,8 +24,6 @@ class InsertCommandBuilder:
             l_outputFile.write("\n")
         
         l_outputFile.close()
-
-        print "File " + l_outputFileName + " saved."
 
     def __prepareInsertCommandForSingleSpeciesRecord(self, p_speciesRecord):
         l_insertCommandName = "INSERT INTO"
