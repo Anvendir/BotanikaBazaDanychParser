@@ -231,6 +231,11 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         l_result = m_sut.getLatinSubdivisionName(g_abiesCephalonica_correctRecord)
         assert l_result == "Gymnospermae", "Actual value: " + l_result
 
+    def testIfExtractingValueOfSubdivisionInPolishFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishSubdivisionName(g_abiesCephalonica_correctRecord)
+        assert l_result == "Nagonasienne", "Actual value: " + l_result
+
 
     def testIfExtractingValueOfDivisionInLatinFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()

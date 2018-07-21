@@ -112,6 +112,19 @@ class SingleRecordDataExtractor:
         l_latinSubdivisionName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "podgromada")
         return l_latinSubdivisionName
 
+    def getPolishSubdivisionName(self, p_speciesRecord):
+        l_latinSubdivisionName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "podgromada")
+        l_polishDataBase = self.__readPolishDataBase()
+
+        l_listWhereSingleLineIsSingleListElement = self.__getFileAsListSingleLineAsSingleListElement(l_polishDataBase) 
+        
+        for l_singleLine in l_listWhereSingleLineIsSingleListElement:
+            l_lineSplitedByRecords = re.split("\t", l_singleLine)
+            if self.__getLatinSubdivisionNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords) == l_latinSubdivisionName:
+                return self.__getPolishSubdivisionNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords)
+
+        return ""
+
     def getLatinDivisionName(self, p_speciesRecord):
         l_latinDivisionName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "gromada")
         return l_latinDivisionName
@@ -158,6 +171,12 @@ class SingleRecordDataExtractor:
 
     def __getPolishClassNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
         return p_polishDataBaseLineSplitedByRecords[8]
+
+    def __getLatinSubdivisionNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
+        return p_polishDataBaseLineSplitedByRecords[11]
+
+    def __getPolishSubdivisionNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
+        return p_polishDataBaseLineSplitedByRecords[10]
 
     def __getLatinDivisionNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
         return p_polishDataBaseLineSplitedByRecords[13]
