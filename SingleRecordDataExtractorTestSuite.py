@@ -32,6 +32,7 @@ g_beckmanniaEruciformis_correctRecord = '''"nr_kol": 477,"rodz_id": 886,"rodzaj"
 
 g_tribulusTerrestris_correctRecord = '''"nr_kol": 4108,"rodz_id": 802,"rodzaj": "Tribulus","nzw_gat": "terrestris","gatunek": "Tribulus terrestris","autor_gat": "L.","n_lacinska": "Tribulus terrestris L.","synantrop": "E","rodzina": "Zygophyllaceae","rzad": "Geraniales","nadrzad": "Pinnatae","podklasa": "Rosidae","klasa": "Dicotyledoneae","podgromada": "Angiospermae","gromada": "Spermatophyta"'''
 
+g_lastRecordInDataBase = '''"nr_kol": 4375,"rodz_id": 85,"rodzaj": "Orlaya","nzw_gat": "grandiflora","gatunek": "Orlaya grandiflora","autor_gat": "(L.) Hoffm.","n_lacinska": "Orlaya grandiflora (L.) Hoffm.","synantrop": "E","rodzina": "Apiaceae","rzad": "Apiales","nadrzad": "Umbelliflorae","podklasa": "Rosidae","klasa": "Dicotyledoneae","podgromada": "Angiospermae","gromada": "Spermatophyta"}'''
 
 class SingleRecordDataExtractorTestSuite(unittest.TestCase):
     def testIfSingleRecordDataExtractorIsCreatedProperly(self):
@@ -186,7 +187,7 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         l_result = m_sut.getPolishFamilyName(g_acenaMacrostemon_correctRecord)
         assert l_result == "Różowate", "Actual value: " + l_result
 
-    def testIfExtractingValueOfFamilyInPolishFieldWorksForLastFamilyInDataBaseCase(self):
+    def testIfExtractingValueOfFamilyInPolishFieldWorksForLastFamilyInPolishDataBaseCase(self):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getPolishFamilyName(g_tribulusTerrestris_correctRecord)
         assert l_result == "Parolistowate", "Actual value: " + l_result
@@ -277,9 +278,19 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         l_result = m_sut.getLatinDivisionName(g_abiesCephalonica_correctRecord)
         assert l_result == "Spermatophyta", "Actual value: " + l_result
 
+    def testIfExtractingValueOfDivisionInLatinFieldWorksForLastRecordCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getLatinDivisionName(g_lastRecordInDataBase)
+        assert l_result == "Spermatophyta", "Actual value: " + l_result
+
     def testIfExtractingValueOfDivisionInPolishFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getPolishDivisionName(g_abiesCephalonica_correctRecord)
+        assert l_result == "Rośliny nasienne", "Actual value: " + l_result
+
+    def testIfExtractingValueOfDivisionInPolishFieldWorksForLastRecordCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishDivisionName(g_lastRecordInDataBase)
         assert l_result == "Rośliny nasienne", "Actual value: " + l_result
 
 

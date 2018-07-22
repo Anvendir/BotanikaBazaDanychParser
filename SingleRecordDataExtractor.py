@@ -166,8 +166,14 @@ class SingleRecordDataExtractor:
         
         return l_polishDataBaseAsString 
 
+    def __removeBrackleBracketsFromRecord(self, p_speciesRecord):
+        l_openBrackleBracketRemoved = re.sub("{", "", p_speciesRecord)
+        l_closeBrackleBracketRemoved = re.sub("}", "", l_openBrackleBracketRemoved)
+        return l_closeBrackleBracketRemoved 
+
     def __getValueOfGivenFieldFromSpeciesRecord(self, p_speciesRecord, p_fieldType):
-        l_fieldsFromRecordAsList = self.__splitRecordByFields(p_speciesRecord)
+        l_preprocessedSpeciesRecord = self.__removeBrackleBracketsFromRecord(p_speciesRecord)
+        l_fieldsFromRecordAsList = self.__splitRecordByFields(l_preprocessedSpeciesRecord)
         l_searchedField = self.__findFieldWithItsValueForGivenType(l_fieldsFromRecordAsList, p_fieldType)
 
         return self.__getValueFromParFieldTypeAndValue(p_fieldType, l_searchedField)
