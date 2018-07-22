@@ -55,16 +55,7 @@ class SingleRecordDataExtractor:
 
     def getPolishFamilyName(self, p_speciesRecord):
         l_latinFamilyName = self.getLatinFamilyName(p_speciesRecord)
-        l_polishDataBase = self.__readPolishDataBase()
-
-        l_listWhereSingleLineIsSingleListElement = self.__getFileAsListSingleLineAsSingleListElement(l_polishDataBase) 
-        
-        for l_singleLine in l_listWhereSingleLineIsSingleListElement:
-            l_lineSplitedByRecords = re.split("\t", l_singleLine)
-            if self.__getLatinFamilyNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords) == l_latinFamilyName:
-                return self.__getPolishFamilyNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords)
-
-        return ""
+        return self.__getValueOfGivenFieldFromPolishDataBase(l_latinFamilyName, "FAMILY")
 
     def getLatinOrderName(self, p_speciesRecord):
         l_latinOrderName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "rzad")
@@ -72,16 +63,7 @@ class SingleRecordDataExtractor:
 
     def getPolishOrderName(self, p_speciesRecord):
         l_latinOrderName = self.getLatinOrderName(p_speciesRecord)
-        l_polishDataBase = self.__readPolishDataBase()
-
-        l_listWhereSingleLineIsSingleListElement = self.__getFileAsListSingleLineAsSingleListElement(l_polishDataBase) 
-        
-        for l_singleLine in l_listWhereSingleLineIsSingleListElement:
-            l_lineSplitedByRecords = re.split("\t", l_singleLine)
-            if self.__getLatinOrderNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords) == l_latinOrderName:
-                return self.__getPolishOrderNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords)
-
-        return ""
+        return self.__getValueOfGivenFieldFromPolishDataBase(l_latinOrderName, "ORDER")
 
     def getLatinSuperorderName(self, p_speciesRecord):
         l_latinSuperorderName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "nadrzad")
@@ -89,15 +71,7 @@ class SingleRecordDataExtractor:
 
     def getPolishSuperorderName(self, p_speciesRecord):
         l_latinSuperorderName = self.getLatinSubclassName(p_speciesRecord)
-        l_polishDataBase = self.__readPolishDataBase()
-
-        l_listWhereSingleLineIsSingleListElement = self.__getFileAsListSingleLineAsSingleListElement(l_polishDataBase)
-        for l_singleLine in l_listWhereSingleLineIsSingleListElement:
-            l_lineSplitedByRecords = re.split("\t", l_singleLine)
-            if self.__getLatinSuperorderNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords) == l_latinSuperorderName:
-                return self.__getPolishSuperorderNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords)
-
-        return ""
+        return self.__getValueOfGivenFieldFromPolishDataBase(l_latinSuperorderName, "SUPERORDER")
 
     def getLatinSubclassName(self, p_speciesRecord):
         l_subClassFullName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "podklasa")
@@ -105,16 +79,7 @@ class SingleRecordDataExtractor:
 
     def getPolishSubclassName(self, p_speciesRecord):
         l_latinSubclassName = self.getLatinSubclassName(p_speciesRecord)
-        l_polishDataBase = self.__readPolishDataBase()
-
-        l_listWhereSingleLineIsSingleListElement = self.__getFileAsListSingleLineAsSingleListElement(l_polishDataBase)
-        
-        for l_singleLine in l_listWhereSingleLineIsSingleListElement:
-            l_lineSplitedByRecords = re.split("\t", l_singleLine)
-            if self.__getLatinSubclassNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords) == l_latinSubclassName:
-                return self.__getPolishSubclassNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords)
-
-        return ""
+        return self.__getValueOfGivenFieldFromPolishDataBase(l_latinSubclassName, "SUBCLASS")
 
     def getLatinClassName(self, p_speciesRecord):
         l_latinClassName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "klasa")
@@ -122,16 +87,7 @@ class SingleRecordDataExtractor:
 
     def getPolishClassName(self, p_speciesRecord):
         l_latinClassName = self.getLatinClassName(p_speciesRecord)
-        l_polishDataBase = self.__readPolishDataBase()
-
-        l_listWhereSingleLineIsSingleListElement = self.__getFileAsListSingleLineAsSingleListElement(l_polishDataBase) 
-        
-        for l_singleLine in l_listWhereSingleLineIsSingleListElement:
-            l_lineSplitedByRecords = re.split("\t", l_singleLine)
-            if self.__getLatinClassNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords) == l_latinClassName:
-                return self.__getPolishClassNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords)
-
-        return ""
+        return self.__getValueOfGivenFieldFromPolishDataBase(l_latinClassName, "CLASS")
 
     def getLatinSubdivisionName(self, p_speciesRecord):
         l_latinSubdivisionName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "podgromada")
@@ -139,16 +95,7 @@ class SingleRecordDataExtractor:
 
     def getPolishSubdivisionName(self, p_speciesRecord):
         l_latinSubdivisionName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "podgromada")
-        l_polishDataBase = self.__readPolishDataBase()
-
-        l_listWhereSingleLineIsSingleListElement = self.__getFileAsListSingleLineAsSingleListElement(l_polishDataBase) 
-        
-        for l_singleLine in l_listWhereSingleLineIsSingleListElement:
-            l_lineSplitedByRecords = re.split("\t", l_singleLine)
-            if self.__getLatinSubdivisionNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords) == l_latinSubdivisionName:
-                return self.__getPolishSubdivisionNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords)
-
-        return ""
+        return self.__getValueOfGivenFieldFromPolishDataBase(l_latinSubdivisionName, "SUBDIVISION")
 
     def getLatinDivisionName(self, p_speciesRecord):
         l_latinDivisionName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "gromada")
@@ -156,80 +103,49 @@ class SingleRecordDataExtractor:
 
     def getPolishDivisionName(self, p_speciesRecord):
         l_latinDivisionName = self.__getValueOfGivenFieldFromSpeciesRecord(p_speciesRecord, "gromada")
-        l_polishDataBase = self.__readPolishDataBase()
-
-        l_listWhereSingleLineIsSingleListElement = self.__getFileAsListSingleLineAsSingleListElement(l_polishDataBase) 
-        
-        for l_singleLine in l_listWhereSingleLineIsSingleListElement:
-            l_lineSplitedByRecords = re.split("\t", l_singleLine)
-            if self.__getLatinDivisionNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords) == l_latinDivisionName:
-                return self.__getPolishDivisionNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords)
-
-        return ""
+        return self.__getValueOfGivenFieldFromPolishDataBase(l_latinDivisionName, "DIVISION")
 
     def getLatinRealmName(self, p_speciesRecord):
         l_polishDataBase = self.__readPolishDataBase()
         l_listWhereSingleLineIsSingleListElement = self.__getFileAsListSingleLineAsSingleListElement(l_polishDataBase) 
         l_lineSplitedByRecords = re.split("\t", l_listWhereSingleLineIsSingleListElement[1])
-        return self.__getLatinRealmNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords)
+        return self.__getSpecifiedNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords, self.__INDEX["REALM_LATIN"])
 
     def getPolishRealmName(self, p_speciesRecord):
-        l_polishDataBase = self.__readPolishDataBase()
-        l_listWhereSingleLineIsSingleListElement = self.__getFileAsListSingleLineAsSingleListElement(l_polishDataBase) 
-        l_lineSplitedByRecords = re.split("\t", l_listWhereSingleLineIsSingleListElement[1])
-        return self.__getPolishRealmNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords)
+        l_latinRealmName = self.getLatinRealmName(p_speciesRecord)
+        return self.__getValueOfGivenFieldFromPolishDataBase(l_latinRealmName, "REALM")
 
-    def __getLatinFamilyNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
-        return p_polishDataBaseLineSplitedByRecords[1]
+    __INDEX = {'FAMILY_PL': 0, 'FAMILY_LATIN': 1, \
+               'ORDER_PL': 2, 'ORDER_LATIN': 3, \
+               'SUPERORDER_PL': 4, 'SUPERORDER_LATIN': 5, \
+               'SUBCLASS_PL': 6, 'SUBCLASS_LATIN': 7, \
+               'CLASS_PL': 8, 'CLASS_LATIN': 9, \
+               'SUBDIVISION_PL': 10, 'SUBDIVISION_LATIN': 11, \
+               'DIVISION_PL': 12, 'DIVISION_LATIN': 13, \
+               'REALM_PL': 14, 'REALM_LATIN': 15, \
+              }
 
-    def __getPolishFamilyNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
-        return p_polishDataBaseLineSplitedByRecords[0]
+    def __getValueOfGivenFieldFromPolishDataBase(self, p_latinName, p_recordType):
+        l_rawPolishDataBase = self.__readPolishDataBase()
 
-    def __getLatinOrderNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
-        return p_polishDataBaseLineSplitedByRecords[3]
+        l_singleLineAsSingleListElement = self.__getFileAsListSingleLineAsSingleListElement(l_rawPolishDataBase) 
+        
+        for l_singleLine in l_singleLineAsSingleListElement:
+            l_lineSplitedByRecords = re.split("\t", l_singleLine)
+            if self.__getSpecifiedNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords, self.__INDEX[p_recordType + "_LATIN"]) == p_latinName:
+                return self.__getSpecifiedNameFromSinglePolishDataBaseLine(l_lineSplitedByRecords, self.__INDEX[p_recordType + "_PL"])
 
-    def __getPolishOrderNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
-        return p_polishDataBaseLineSplitedByRecords[2]
+        return ""
 
-    def __getLatinSuperorderNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
-        return p_polishDataBaseLineSplitedByRecords[5]
+    def __getSpecifiedNameFromSinglePolishDataBaseLine(self, p_lineSplitedByRecords, p_index):
+        return p_lineSplitedByRecords[p_index]
 
-    def __getPolishSuperorderNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
-        return p_polishDataBaseLineSplitedByRecords[4]
+    def __removeWindowsEndLineCharacters(self, p_polishNameDataBaseAsString):
+        return re.sub("\r", "", p_polishNameDataBaseAsString)
 
-    def __getLatinSubclassNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
-        return p_polishDataBaseLineSplitedByRecords[7]
-
-    def __getPolishSubclassNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
-        return p_polishDataBaseLineSplitedByRecords[6]
-
-    def __getLatinClassNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
-        return p_polishDataBaseLineSplitedByRecords[9]
-
-    def __getPolishClassNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
-        return p_polishDataBaseLineSplitedByRecords[8]
-
-    def __getLatinSubdivisionNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
-        return p_polishDataBaseLineSplitedByRecords[11]
-
-    def __getPolishSubdivisionNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
-        return p_polishDataBaseLineSplitedByRecords[10]
-
-    def __getLatinDivisionNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
-        return p_polishDataBaseLineSplitedByRecords[13]
-
-    def __getPolishDivisionNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
-        return p_polishDataBaseLineSplitedByRecords[12]
-
-    def __getLatinRealmNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
-        l_result = re.sub("\s", "", p_polishDataBaseLineSplitedByRecords[15])
-        return l_result
-
-    def __getPolishRealmNameFromSinglePolishDataBaseLine(self, p_polishDataBaseLineSplitedByRecords):
-        return p_polishDataBaseLineSplitedByRecords[14]
-
-    def __getFileAsListSingleLineAsSingleListElement(self, p_polishNameDataBase):
-        l_splitedList = re.split("\n", p_polishNameDataBase)
+    def __getFileAsListSingleLineAsSingleListElement(self, p_polishNameDataBaseAsString):
+        l_preprocessedDataBase = self.__removeWindowsEndLineCharacters(p_polishNameDataBaseAsString)
+        l_splitedList = re.split("\n", l_preprocessedDataBase)
         l_splitedList.pop()
         return l_splitedList
 
