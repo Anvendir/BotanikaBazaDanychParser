@@ -30,6 +30,9 @@ g_arabisGlabra_correctRecord = '''"nr_kol": 319,"rodz_id": 765,"rodzaj": "Arabis
 
 g_beckmanniaEruciformis_correctRecord = '''"nr_kol": 477,"rodz_id": 886,"rodzaj": "Beckmannia","nzw_gat": "eruciformis","gatunek": "Beckmannia eruciformis","autor_gat": "Host","n_lacinska": "Beckmannia eruciformis Host","n_polska": "Beckmannia robaczkowata","synantrop": "A","rodzina": "Poaceae","rzad": "Poales","nadrzad": "","podklasa": "Farinosae","klasa": "Monocotyledoneae","podgromada": "Angiospermae","gromada": "Spermatophyta"'''
 
+g_tribulusTerrestris_correctRecord = '''"nr_kol": 4108,"rodz_id": 802,"rodzaj": "Tribulus","nzw_gat": "terrestris","gatunek": "Tribulus terrestris","autor_gat": "L.","n_lacinska": "Tribulus terrestris L.","synantrop": "E","rodzina": "Zygophyllaceae","rzad": "Geraniales","nadrzad": "Pinnatae","podklasa": "Rosidae","klasa": "Dicotyledoneae","podgromada": "Angiospermae","gromada": "Spermatophyta"'''
+
+
 class SingleRecordDataExtractorTestSuite(unittest.TestCase):
     def testIfSingleRecordDataExtractorIsCreatedProperly(self):
         m_sut = SingleRecordDataExtractor()
@@ -182,6 +185,11 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getPolishFamilyName(g_acenaMacrostemon_correctRecord)
         assert l_result == "Różowate", "Actual value: " + l_result
+
+    def testIfExtractingValueOfFamilyInPolishFieldWorksForLastFamilyInDataBaseCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishFamilyName(g_tribulusTerrestris_correctRecord)
+        assert l_result == "Parolistowate", "Actual value: " + l_result
 
 
     def testIfExtractingValueOfOrderInLatinFieldWorksForSimpleCase(self):
