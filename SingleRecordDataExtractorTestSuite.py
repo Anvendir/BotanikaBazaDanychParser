@@ -28,6 +28,8 @@ g_ammobiumAlatum_correctRecord = '''"nr_kol": 239,"rodz_id": 279,"rodzaj": "Ammo
 
 g_arabisGlabra_correctRecord = '''"nr_kol": 319,"rodz_id": 765,"rodzaj": "Arabis","nzw_gat": "glabra","gatunek": "Arabis glabra","autor_gat": "(L.) Bernh.","n_lacinska": "Arabis glabra (L.) Bernh.","n_polska": "Gęsiówka wieżyczkowata (Wieżyczka (Wieżycznik) gładka)","rodzina": "Brassicaceae","rzad": "Capparales","nadrzad": "Cistiflorae","podklasa": "Dilleniidae","klasa": "Dicotyledoneae","podgromada": "Angiospermae","gromada": "Spermatophyta"'''
 
+g_beckmanniaEruciformis_correctRecord = '''"nr_kol": 477,"rodz_id": 886,"rodzaj": "Beckmannia","nzw_gat": "eruciformis","gatunek": "Beckmannia eruciformis","autor_gat": "Host","n_lacinska": "Beckmannia eruciformis Host","n_polska": "Beckmannia robaczkowata","synantrop": "A","rodzina": "Poaceae","rzad": "Poales","nadrzad": "","podklasa": "Farinosae","klasa": "Monocotyledoneae","podgromada": "Angiospermae","gromada": "Spermatophyta"'''
+
 class SingleRecordDataExtractorTestSuite(unittest.TestCase):
     def testIfSingleRecordDataExtractorIsCreatedProperly(self):
         m_sut = SingleRecordDataExtractor()
@@ -203,6 +205,16 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         l_result = m_sut.getLatinSuperorderName(g_acenaMacrostemon_correctRecord)
         assert l_result == "Rosiflorae", "Actual value: " + l_result
 
+    def testIfExtractingValueOfSuperorderInLatinFieldWorksForFieldNotFilledLatinAndPolishCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishSuperorderName(g_abiesCephalonica_correctRecord)
+        assert l_result == "", "Actual value: " + l_result
+
+    def testIfExtractingValueOfSuperorderInLatinFieldWorksForFieldWhereLatinFieldIsPresentAndPolishNotCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishSuperorderName(g_ageratumHoustonianum_correctRecord)
+        assert l_result == "", "Actual value: " + l_result
+
 
     def testIfExtractingValueOfSubclassInLatinFieldWorksForSimpleCase(self):
         m_sut = SingleRecordDataExtractor()
@@ -213,6 +225,21 @@ class SingleRecordDataExtractorTestSuite(unittest.TestCase):
         m_sut = SingleRecordDataExtractor()
         l_result = m_sut.getLatinSubclassName(g_acenaMacrostemon_correctRecord)
         assert l_result == "Rosidae", "Actual value: " + l_result
+
+    def testIfExtractingValueOfSubclassInPolishFieldWorksForSimpleCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishSubclassName(g_acenaMacrostemon_correctRecord)
+        assert l_result == "Różowe", "Actual value: " + l_result
+
+    def testIfExtractingValueOfSubclassInPolishFieldWorksForFieldNotFilledLatinAndPolishCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishSubclassName(g_abiesCephalonica_correctRecord)
+        assert l_result == "", "Actual value: " + l_result
+
+    def testIfExtractingValueOfSubclassInPolishFieldWorksForFieldWhereLatinFieldIsPresentAndPolishNotCase(self):
+        m_sut = SingleRecordDataExtractor()
+        l_result = m_sut.getPolishSubclassName(g_beckmanniaEruciformis_correctRecord)
+        assert l_result == "", "Actual value: " + l_result
 
 
     def testIfExtractingValueOfClassInLatinFieldWorksForSimpleCase(self):
