@@ -82,26 +82,36 @@ class ExcelDataBaseBuilder:
 
         l_subSpeciesPolish = l_dataExtractor.getPolishSubspeciesName(p_speciesRecord)
         l_subSpeciesLatin = l_dataExtractor.getLatinSubspeciesName(p_speciesRecord)
+
         l_speciesPolish = l_dataExtractor.getPolishSpeciesName(p_speciesRecord)
         l_speciesLatin = l_dataExtractor.getLatinSpeciesName(p_speciesRecord)
+
         l_genusPolish = l_dataExtractor.getPolishGenusName(p_speciesRecord)
         l_genusLatin = l_dataExtractor.getLatinGenusName(p_speciesRecord)
-        l_familyPolish = ""
+
+        l_familyPolish = l_dataExtractor.getPolishFamilyName(p_speciesRecord) 
         l_family = l_dataExtractor.getLatinFamilyName(p_speciesRecord)
-        l_orderPolish = ""
+
+        l_orderPolish = l_dataExtractor.getPolishOrderName(p_speciesRecord)
         l_order = l_dataExtractor.getLatinOrderName(p_speciesRecord)
-        l_superorderPolish = "" 
+
+        l_superorderPolish = l_dataExtractor.getPolishSuperorderName(p_speciesRecord)
         l_superorder = l_dataExtractor.getLatinSuperorderName(p_speciesRecord)
-        l_subclassPolish = ""
+
+        l_subclassPolish = l_dataExtractor.getPolishSubclassName(p_speciesRecord)
         l_subclass = l_dataExtractor.getLatinSubclassName(p_speciesRecord)
-        l_classPolish = ""
+
+        l_classPolish = l_dataExtractor.getPolishClassName(p_speciesRecord)
         l_class_ = l_dataExtractor.getLatinClassName(p_speciesRecord)
-        l_subdivisionPolish = ""
+
+        l_subdivisionPolish = l_dataExtractor.getPolishSubdivisionName(p_speciesRecord)
         l_subdivision = l_dataExtractor.getLatinSubdivisionName(p_speciesRecord)
-        l_divisionPolish = ""
+
+        l_divisionPolish = l_dataExtractor.getPolishDivisionName(p_speciesRecord)
         l_division = l_dataExtractor.getLatinDivisionName(p_speciesRecord)
-        l_realmPolish = ""
-        l_realm = ""
+
+        l_realmPolish = l_dataExtractor.getPolishRealmName(p_speciesRecord)
+        l_realm = l_dataExtractor.getLatinRealmName(p_speciesRecord)
 
         l_systemathicHierarchy = l_subSpeciesPolish + ";" + \
                                  l_subSpeciesLatin + ";" + \
